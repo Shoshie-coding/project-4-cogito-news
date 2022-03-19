@@ -1,5 +1,10 @@
 /* Universal Styles */
 
+body {
+
+margin: 0;
+}
+
 
 h1 {
     font-family: 'Ovo', Serif;
@@ -34,11 +39,11 @@ p {
   }
   
 
+
 /* Main container section */
 
 .main-container {
     
-    background-color: white;
     text-align: justify;
     margin: 20px;
     border: none;
@@ -47,6 +52,7 @@ p {
     line-height: 1.50;
     height: 100%;
     color: black;
+    
 
 }
 
@@ -68,4 +74,62 @@ img {
 a {
     color: black;
 }
+
+/* Contact us section */
+.contact-us-section h2 {
+    font-size: 2.5rem;
+    margin: 50px;
+    text-align: center;
+
+}
+
+/* Footer */
+
+.main-footer {
+    background-color: #D0D8D9;
+    font-size: 100%;
+    font-weight: 400;
+    font-family: 'Quattrocento Sans', Sans-Serif;
+    color: #0339A6;
+    padding: 40px 0;
+    text-align: center;
+    margin: 0;
+}
+
+.main-footer li {
+    list-style-type: none;
+    letter-spacing: 4px;
+    padding: 10px 10px;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.main-footer ul {
+    display: table;
+    list-style-type: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+}
+
+.main-footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-footer a:hover {
+    color: #401801;
+    border-bottom: 2px solid #403521;
+}
+
+.copyright {
+    text-align: center;
+    color: black;
+    font-size: 100%;
+    font-weight: 600;
+    font-family: 'Quattrocento Sans', Sans-Serif;
+    margin: 50px 80px 0 0;
+}
+
 
