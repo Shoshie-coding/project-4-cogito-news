@@ -1,5 +1,5 @@
 """
-WSGI config for codestar project.
+WSGI config for cogito-news project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

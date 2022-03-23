@@ -1,5 +1,5 @@
 """
-ASGI config for codestar project.
+ASGI config for cogito-news project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
