@@ -5,6 +5,11 @@ body {
 margin: 0;
 }
 
+/* Footer styles*/
+.navbar {
+    font-family: 'Inknut Antiqua', serif;
+    color:#0339A6;
+}
 
 h1 {
     font-family: 'Ovo', Serif;
