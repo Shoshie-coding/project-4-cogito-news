@@ -47,7 +47,7 @@ p {
 
 /* Main container section */
 
-.main-container {
+/* .container {
     
     text-align: justify;
     margin: 20px;
@@ -59,9 +59,9 @@ p {
     color: black;
     
 
-}
+} */
 
-.main-container h1 {
+.container-fluid h1 {
     font-size: 2.5rem;
     margin: 50px;
 }
