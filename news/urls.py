@@ -4,5 +4,6 @@ from . import views
 urlpatterns = [
     
     path("", views.home, name="home"),
+    path("create", views.PostCreateView.as_view(), name="create"),
     path("stiri/<str:category>", views.stiri, name="stiri")
 ]
