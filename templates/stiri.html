@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+
+
+{% block content %}
+<h1>from our users</h1>
+{% for item in user_posts %}
+
+{% endfor %}
+<h1>News from the web</h1>
+
+<div>
+    {% for item in data %}
+    <div><p>{{item.title}}</p>
+    <img src="{{item.urlToImage}}" />
+    <p>{{item.content}}</p>
+    <a href="{{item.url}}">View on source</a> 
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

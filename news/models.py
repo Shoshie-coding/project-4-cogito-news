@@ -24,17 +24,17 @@ class Post(models.Model):
         User, related_name='blogpost_like', blank=True)
 
 
-class Meta:
-    """
-    This shows comments in decending order
-    """
-    ordering = ['-created_on']
+    class Meta:
+        """
+        This shows comments in decending order
+        """
+        ordering = ['-created_on']
 
-def _str_(self):
-    return self.title
+    def _str_(self):
+        return self.title
 
-def number_of_likes(self):
-    return self.likes.count()
+    def number_of_likes(self):
+        return self.likes.count()
 
 class Comment(models.Model):
     """
