@@ -137,6 +137,19 @@ a {
     margin: 50px 80px 0 0;
 }
 
+/* Button styles */
+
+.btn-signup {
+    background-color: #23BBBB;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
+}
+
 
 /* Media queries */
 
