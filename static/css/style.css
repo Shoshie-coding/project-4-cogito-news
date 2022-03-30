@@ -136,6 +136,9 @@ a {
     font-family: 'Quattrocento Sans', Sans-Serif;
     margin: 50px 80px 0 0;
 }
+/* Login page */
+
+
 
 /* Button styles */
 
@@ -146,7 +149,7 @@ a {
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #fff;
+    background-color: #D0D8D9;
     color: #23BBBB;
 }
 
