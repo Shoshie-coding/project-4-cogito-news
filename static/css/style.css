@@ -5,11 +5,14 @@ body {
 margin: 0;
 }
 
-/* Footer styles*/
+/* Footer styles */
 .navbar {
-    font-family: 'Inknut Antiqua', serif;
-    color:#0339A6;
+    font-family: 'Quattrocento Sans', Sans-Serif;
+    color: #025930;
+    background-color: #D0D8D9;
 }
+
+/* Universal styles */
 
 h1 {
     font-family: 'Ovo', Serif;
