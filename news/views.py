@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from django.views import generic, View
 from .models import Post
 from django.http import JsonResponse
@@ -8,18 +8,27 @@ import requests
 #b336f8d783094ae1b6a923721064ccdd
 
 
-class PostCreateView(generic.edit.CreateView):
+class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
     model = Post
-    fields = '__all__' 
+    fields = ['title', 'slug', 'featured_image', 'category', 'content', 'excerpt'] 
     template_name = "post_form.html"
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        form.instance.status = 0
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('thanks')
 
 def home(request):
     return render(request, "index.html")
 
-
+def thanks(request):
+    return render(request, "thanks.html")
 
 def stiri(request, category):
-    user_posts = Post.objects.filter(category=category)
+    user_posts = Post.objects.filter(category=category, status = 1)
 
     url = ('https://newsapi.org/v2/everything?'
        'q={}&'

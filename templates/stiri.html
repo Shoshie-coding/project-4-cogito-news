@@ -2,11 +2,12 @@
 
 
 {% block content %}
+{% load cloudinary %}      
 
 <h1>Browse posts from our users</h1>
 {% for item in user_posts %}
 <div><p>{{item.title}}</p>
-<img src="{{item.featured_image}}" />
+    {% cloudinary item.featured_image format="jpg" width=120 height=80 crop="fill" %}
 </div>
 {% endfor %}
 
