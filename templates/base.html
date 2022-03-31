@@ -36,7 +36,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/index.html">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/stiri/arts-culture">Arts and Culture</a>
@@ -70,10 +70,12 @@
             </li> -->
         {% if user.is_authenticated %}
         <li class="nav-item">
+        <p>You are logged in as {{user.username}}, 
           <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+        </p>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/create">Create a post</a>
+          <a class="nav-link" href="{% url 'create' %}">Create a post</a>
         </li>
         {% else %}
         <li><a href="{% url 'account_login' %}">Sign In</a></li>
@@ -95,16 +97,6 @@
         
       </div> -->
 
-  <div id="hero-image">
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="title display-3 text-left" style="font-weight:300;">Cogito, ergo sum</h1>
-        <h2 class="lead string-1 text-left">Welcome to Cogito, ergo sum</i> | I think therefore I am</p>
-          <h2 class="lead string-1 text-left">A website for culture and technology enthousiasts</p>
-
-      </div>
-    </div>
-  </div>
 
 
   {% block content %}

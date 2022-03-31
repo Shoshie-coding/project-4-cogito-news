@@ -37,8 +37,7 @@ class PostList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 5
 
-def arts_culture(request):
-    return render(request, "stiri/arts-culture", None) 
+
 
 class ArticleDetailView(View):
     """

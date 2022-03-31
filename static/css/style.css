@@ -139,7 +139,44 @@ a {
     font-family: 'Quattrocento Sans', Sans-Serif;
     margin: 50px 80px 0 0;
 }
-/* Login page */
+/* Login / Sign in pages */
+
+.form-signup {
+    margin: 50px;
+}
+
+.form-signin {
+    margin: 50px;
+
+}
+
+.form-signout {
+    margin: 100px 100px 100px 200px;
+}
+
+
+.btn-signup {
+    background-color: #23BBBB;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #401801;
+}
+
+.link {
+    color: #23BBBB;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #445261;
+    text-decoration: underline;
+}
+
 
 
 
@@ -164,8 +201,18 @@ a {
     img {
         width: 100%
       }
+    
+    .form-signup {
+        margin: 10px 0;
+    }
 
+    .form-signin {
+        margin: 10px 0;
+    }
 
 }
 
+@media only screen and max width: 600px) {
+
+}
    
