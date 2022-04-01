@@ -10,7 +10,15 @@ margin: 0;
     font-family: 'Quattrocento Sans', Sans-Serif;
     color: #025930;
     background-color: #D0D8D9;
+
+
 }
+
+.dropdown-menu {
+    background-color:#D0D8D9;
+
+}
+
 
 /* Universal styles */
 
