@@ -5,7 +5,7 @@ body {
 margin: 0;
 }
 
-/* Footer styles */
+/* Navbar styles */
 .navbar {
     font-family: 'Quattrocento Sans', Sans-Serif;
     color: #025930;
@@ -57,6 +57,10 @@ p {
 
 
 /* Main container section */
+
+.featured-news {
+    margin: 5px 50px;
+}
 
 /* .container {
     
