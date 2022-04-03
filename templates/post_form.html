@@ -14,7 +14,7 @@
     <form method="post">{% csrf_token %}
         {{ form.as_p }}
 
-        <div class="container border p-5 mb-5">
+        <div class="container border border-primary d-flex justify-content-center p-5 mb-5">
             <div class="mb-3">
                 <form method="post"><input type="hidden" name="csrfmiddlewaretoken"
                         value="l92j6YfTylvFpSldYcXuDMO52x2lakEWJykTDBea1DsvgA3KDshjQt3dK6hjZgWo">
@@ -63,7 +63,7 @@
                         </p>
                     </p>
 
-                    <button type="button" class="btn btn-primary">Submit blog post</button>
+                    <button type="button" class="btn btn-primary btn-block">Submit blog post</button>
 
                 </form>
             </div>
