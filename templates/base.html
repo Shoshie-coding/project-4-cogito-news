@@ -21,7 +21,7 @@
   <div class="container-fluid"></div>
 
   <!-- Navbar section-->
-  <nav class="navbar navbar-expand-md">
+  <nav class="navbar navbar-expand-md sticky-top">
 
     <a class="navbar-brand" href="/">Cogito, ergo sum
       <!-- <img src="/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="" loading="lazy"> -->
@@ -66,6 +66,7 @@
         <li class="nav-item mx-auto">
           <a class="nav-link" href="{% url 'create' %}">Create a post</a>
         </li>
+     
         {% else %}
         <li class="nav-item mx-auto"><a class="nav-link" href="{% url 'account_login' %}">Sign In</a></li>
         <li class="nav-item mx-auto"><a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a></li>

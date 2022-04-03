@@ -9,3 +9,5 @@ urlpatterns = [
     path("thanks", views.thanks, name="thanks")
 ]
 
+
+

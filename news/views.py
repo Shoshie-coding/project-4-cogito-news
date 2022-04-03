@@ -21,6 +21,12 @@ class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
     def get_success_url(self):
         return reverse('thanks')
 
+class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
+    model = Post
+    fields = ['title', 'slug', 'featured_image', 'category', 'content', 'excerpt'] 
+    template_name = "post_form.html"
+
+
 def home(request):
     return render(request, "index.html")
 

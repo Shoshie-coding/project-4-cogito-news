@@ -27,12 +27,13 @@ body {
 }
 
 
-/* Universal styles */
+/* General styles */
 
 h1 {
     font-family: 'Ovo', Serif;
-    font-size: 300%;
+    font-size: 250%;
     letter-spacing: 3px;
+    margin: 10px 0 15;
 
 }
 
@@ -49,7 +50,7 @@ p {
 /* Header styles */
 
 
-/* Hero image */
+/* Hero image Home page */
 .jumbotron {
     background-image: url(../images/vintage-g0ea6d6c92_1920.jpg),
         linear-gradient(to right, rgb(174, 184, 229), rgb(117, 235, 213));
@@ -60,6 +61,18 @@ p {
     color: #fff;
     height: 500px;
 }
+
+/* Hero image on Create Post page */
+
+.bg-no-overlay {
+    background: url(../images/daria-kraplak-d34DtRp1bqo-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    height: 500px;
+}
+
 
 
 
@@ -101,6 +114,18 @@ img {
 a {
     color: black;
 }
+
+/* Write a blog section */
+/* .create-blog {
+    background-image: url(../images/cream-background.png),
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: #fff;
+    height: 300px;
+    
+} */
 
 /* Contact us section */
 .contact-us-section h2 {

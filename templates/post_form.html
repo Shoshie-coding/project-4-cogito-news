@@ -4,7 +4,12 @@
 
 
 {% block content %}
-<h1>CREATE YOUR OWN POST</h1>
+<div class="jumbotron bg-no-overlay">
+	<div class="row text-center">
+		<h1>Write a blog and inspire the world</h1>
+	</div>
+</div>
+<h1>Write a blog</h1>
 <form method="post">{% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Save">

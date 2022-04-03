@@ -4,6 +4,8 @@
 
 {% block content %}
 
+<!-- Hero image section-->
+
 <div id="hero-image">
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
@@ -14,11 +16,11 @@
     </div>
   </div>
 </div>
-<!-- Main homepage / Featured News -->
+<!-- Featured News section -->
 
 <div class="featured-news justify-content-center">
 
-  <h1 class="text-center">Discover our featured Blogs and News</h1>
+  <h1 class="text-center" style="margin-bottom: 15px;margin-top: 10px;">Discover our featured news</h1>
 
   <div class="row row-cols-1 row-cols-md-2">
     <div class="col mb-4">
@@ -58,20 +60,45 @@
         </a></div>
     </div>
   </div>
-  <!--Create a blog-->
-  <section class="contact-us-section">
-    <h2>Write a blog post</h2>
 
-    <div class="card text-center">
-      <div class="card-body">
-        <h5 class="card-title text-center">Share your ideas with other people and create your own blog </h5>
-        <a href="/create" class="btn btn-outline-primary">Create blog</a>
+  <!--Write a blog section-->
+  <section class="create-blog">
+
+    <div class="row no-gutters">
+      <div class="col-12 col-sm-6 col-md-8">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Write your first blog post</h5>
+            <p class="card-text">Share your ideas with the community and write a blog post</p>
+            <a href="/create" class="btn btn-primary">Create a post</a>
+          </div>
+        </div>
       </div>
+
+        <div class="col-6 col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <img src="{% static 'images/joanna-kosinska-B6yDtYs2IgY-unsplash.jpg' %}"
+                class="img-fluid" alt="Image of a stack of letters" class="rounded float-right">
+
+            </div>
+          </div>
+        </div>
+
     </div>
 
   </section>
-  <!--Contact Us - Hear more-->
-  <section class="contact-us-section">
+
+</div>
+
+
+
+
+
+<!--Contact Us - Hear more-->
+<section>
+  <div class="contact-us-section">
+
     <h2>Get in touch</h2>
 
     <div class="card text-center">
@@ -81,8 +108,9 @@
         <a href="contact.html" class="btn btn-outline-primary">Get in touch</a>
       </div>
     </div>
+  </div>
 
-  </section>
+</section>
 </div>
 
 {% if is_paginated %}
@@ -93,7 +121,6 @@
     {% endif %}
     {% if page_obj.has_next %}
     <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
     {% endif %}
   </ul>
 </nav>
@@ -102,7 +129,5 @@
 
 
 {% endblock %}
-
-
 
 {% block cristina %} {% endblock %}
