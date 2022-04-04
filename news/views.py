@@ -8,6 +8,21 @@ import requests
 #b336f8d783094ae1b6a923721064ccdd
 
 
+
+class PostUpdateView(LoginRequiredMixin, generic.edit.UpdateView):
+    model = Post
+    fields = ['title', 'slug', 'featured_image', 'category', 'content', 'excerpt'] 
+    template_name = "post_form.html"
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        form.instance.status = 0
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('thanks')
+
+
 class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
     model = Post
     fields = ['title', 'slug', 'featured_image', 'category', 'content', 'excerpt'] 
@@ -21,11 +36,8 @@ class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
     def get_success_url(self):
         return reverse('thanks')
 
-class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
-    model = Post
-    fields = ['title', 'slug', 'featured_image', 'category', 'content', 'excerpt'] 
-    template_name = "post_form.html"
-
+def multam(request):
+    return render(request, "multam.html")
 
 def home(request):
     return render(request, "index.html")
@@ -40,6 +52,7 @@ def stiri(request, category):
        'q={}&'
        'from=2022-03-28&'
        'sortBy=popularity&'
+       'pageSize=5&'
        'apiKey=b336f8d783094ae1b6a923721064ccdd'.format(category))
     print(url)
     response = requests.get(url)
@@ -53,6 +66,13 @@ class PostList(generic.ListView):
     paginate_by = 5
 
 
+
+class MyPostList(generic.ListView):
+    model = Post
+    template_name = 'myposts.html'
+    
+    def get_queryset(self):
+        return Post.objects.filter(author=self.request.user)
 
 class ArticleDetailView(View):
     """

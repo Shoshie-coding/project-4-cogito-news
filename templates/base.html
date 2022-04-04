@@ -61,6 +61,9 @@
             </li> -->
         {% if user.is_authenticated %}
         <li class="nav-item mx-auto">
+          <a class="nav-link mx-auto" href="/myposts">View My Posts</a>
+        </li>
+        <li class="nav-item mx-auto">
           <a class="nav-link mx-auto" href="{% url 'account_logout' %}">Logout</a>
         </li>
         <li class="nav-item mx-auto">

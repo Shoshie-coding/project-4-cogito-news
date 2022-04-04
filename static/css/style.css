@@ -258,3 +258,23 @@ a {
 }
 
 @media only screen and max width: 600px) {}
+
+
+
+
+#formular {
+    width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    border: solid 1px #23BBBB;
+}
+
+
+#fromular label {
+    color: red;
+}
+
+#formular input {
+    width: 200px;
+    
+}

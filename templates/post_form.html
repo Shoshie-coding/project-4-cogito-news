@@ -10,67 +10,14 @@
     </div>
 </div>
 <h1>Write a blog</h1>
-
+    <div id="formular">
     <form method="post">{% csrf_token %}
         {{ form.as_p }}
 
-        <div class="container border border-primary d-flex justify-content-center p-5 mb-5">
-            <div class="mb-3">
-                <form method="post"><input type="hidden" name="csrfmiddlewaretoken"
-                        value="l92j6YfTylvFpSldYcXuDMO52x2lakEWJykTDBea1DsvgA3KDshjQt3dK6hjZgWo">
-                    <p>
-                        <label for="id_title" class="form-label">Title</label>
-                        <input type="text" name="title" maxlength="300" class="form-control" required id="id_title"
-                            spellcheck="false" data-ms-editor="true" placeholder="Chose a title for your blog post">
-
-                    </p>
-                    <p>
-                        <label for="id_slug" class="form-label">Slug</label>
-                        <input type="text" name="slug" maxlength="300" class="form-control" required id="id_slug"
-                            spellcheck="false" data-ms-editor="true">
-
-                    </p>
-                    <p>
-                        <label for="id_featured_image">Image:</label>
-                        <input type="file" name="featured_image" id="id_featured_image">
-                    </p>
-                    <p>
-                        <label for="id_category">Category:</label>
-                        <select name="category" required="" id="id_category">
-                            <option value="" selected="">---------</option>
-
-                            <option value="Arts-culture">Arts-culture</option>
-
-                            <option value="Technology">Technology</option>
-
-                            <option value="Movies%20and%20Music">Movies and Music</option>
-
-                            <option value="Travel">Travel</option>
-
-                        </select>
-                    </p>
-
-                    <p>
-                        <label for="id_content">Content:</label>
-                        <textarea name="content" cols="40" rows="10" class="form-control" required id="id_content"
-                            spellcheck="false" data-ms-editor="true">
-                    </textarea>
-                    </p>
-                    <p>
-                        <p><label for="id_excerpt">Excerpt:</label> <textarea name="excerpt" cols="40" rows="10"
-                                class="form-control" id="id_excerpt" spellcheck="false"
-                                data-ms-editor="true"></textarea>
-                        </p>
-                    </p>
-
-                    <button type="button" class="btn btn-primary btn-block">Submit blog post</button>
-
-                </form>
-            </div>
-        </div>
-
+<button class="btn-primary" type="submit">Submit</button>
 
     </form>
+</div>
 
 
 {% endblock %}
