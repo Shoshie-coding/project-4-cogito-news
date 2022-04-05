@@ -1,19 +1,29 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 
 
 {% block content %}
-{% load cloudinary %}      
+{% load cloudinary %}
 
-<div class="container">
-    <div class="row">
-        <a href="{% url 'create' %}">Create a post</a>
-      <div class="col-sm">
-{% for item in object_list %}
-<div class="post"><p>{{item.title}}</p>
-    {% cloudinary item.featured_image format="jpg" width=120 height=80 crop="fill" %}
-    <a href="{% url 'Post_update' item.id %}">update</a>
+<div class="container justify-content-center">
+    <div class="col-md">
+        <h1 class="text-center mb-5">My Posts</h1>
+        <div class="card" style="width: 30rem;>
+            <div class=" card-header">
+            {% for item in object_list %}
+            <p>{{item.title}}</p>
+            <img class="card-img-top" {% cloudinary item.featured_image format="jpg" width=120 height=80 crop="fill" %}
+                <a href="{% url 'Post_update' item.id %}" class="btn btn-primary">Update post</a>
+        </div>
+            {% endfor %}
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Create post</h5>
+                <p class="card-text">If you'd like to create a post instead, click here</p>
+                <a href="{% url 'create' %}" class="btn btn-primary">Create post</a>
+            </div>
+        </div>
+    </div>
 </div>
-{% endfor %}
-</div>
-</div></div>
+
 {% endblock %}
