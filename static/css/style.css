@@ -15,10 +15,12 @@ body {
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    font-weight: 600;
 }
 
 .navbar-toggler {
     border-color: rgb(255, 255, 255);
+    font-weight: 400;
 }
 
 .dropdown-menu {
@@ -96,9 +98,9 @@ p {
 
 } */
 
-.container-fluid h1 {
+.container-fluid h1, h2, h3, h4 {
     font-size: 2.5rem;
-    margin: 50px;
+    margin: 50px 20px;
 }
 
 
@@ -257,20 +259,39 @@ a {
 
 }
 
-@media only screen and max width: 600px) {}
+
+@media only screen and (max-width: 300px) {
+    #formular {
+        width: auto;
+        padding: 0;
+        margin: 0;
+
+    }
+} 
+
+@media only screen and (max-width: 600px) {
+    #formular {
+        width: auto;
+        padding: 0;
+        margin: 0;
+
+    }
+} 
 
 
 
+
+/* Write a post page */ 
 
 #formular {
-    width: 500px;
-    margin: 0 auto;
-    padding: 30px;
+    width: 600px;
+    margin: 20px auto;
+    padding: 10px;
     border: solid 1px #23BBBB;
 }
 
 
-#fromular label {
+#formular label {
     color: red;
 }
 
@@ -278,6 +299,7 @@ a {
     width: 200px;
     
 }
+
 
 
 .news-section {

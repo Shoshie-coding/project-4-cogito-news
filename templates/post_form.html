@@ -9,13 +9,10 @@
         <h1>Write a blog and inspire the world</h1>
     </div>
 </div>
-<h1>Write a blog</h1>
-    <div id="formular">
+<div id="formular" class="container-fluid">
     <form method="post">{% csrf_token %}
         {{ form.as_p }}
-
-<button class="btn-primary" type="submit">Submit</button>
-
+        <button class="justify-content-center btn-primary" type="submit">Submit</button>
     </form>
 </div>
 
