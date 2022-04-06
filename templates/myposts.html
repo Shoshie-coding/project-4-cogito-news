@@ -7,12 +7,23 @@
 <div class="container justify-content-center">
     <div class="col-md">
         <h1 class="text-center mb-5">My Posts</h1>
-        <div class="card" style="width: 30rem;>
+        {% for item in object_list %}
+        <div class="card" style="width: 30rem;">
             <div class=" card-header">
-            {% for item in object_list %}
+      
             <p>{{item.title}}</p>
-            <img class="card-img-top" {% cloudinary item.featured_image format="jpg" width=120 height=80 crop="fill" %}
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="{{item.featured_image.url}}" />
+                </div>
+                <div class="col-sm-6">
+                <p>{{item.excerpt}}</p>
+              
+                </div>
                 <a href="{% url 'Post_update' item.id %}" class="btn btn-primary">Update post</a>
+            </div>
+            
+                
         </div>
             {% endfor %}
 

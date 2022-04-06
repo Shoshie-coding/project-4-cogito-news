@@ -301,3 +301,18 @@ a {
 .news-section {
     margin: 20px 20px;
 }
+
+
+.blog_post {
+    margin-top: 80px;
+}
+
+.blog_post .featured {
+    position: relative;
+}
+
+
+.blog_post img {
+    width: 100%;
+    height: auto;
+}

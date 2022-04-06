@@ -5,14 +5,24 @@
 {% load cloudinary %}
 
 <div class="container container-fluid justify-content-center">
-    <div class="row gx-5">
-        <div class="col-lg-8">
+    <div class="row">
+        <div class="col-md-8">
             {% for item in user_posts %}
-                <h1 class="justify-content-center">{{item.title}}</h1>
-                {% cloudinary item.featured_image format="jpg" width=120 height=80 crop="fill" %}
+            <div class="blog_post">
+                <div class="featured">
+                    <h1 class="title">{{item.title}}</h1>
+                    <img src="{{item.featured_image.url}}" />
+                </div>
+                <div class="content">
+                    <p>{{item.excerpt}}</p>
+                    <a href="">Read more</a>
+                </div>
+
+            </div>
+
             {% endfor %}
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <h3>News</h3>
 
             {% for item in data %}
