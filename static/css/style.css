@@ -98,7 +98,7 @@ p {
 
 } */
 
-.container-fluid h1, h2, h3, h4, h5 {
+.container-fluid h1, h2 {
     font-size: 2rem;
     margin: 50px 20px;
 }
@@ -112,12 +112,11 @@ img {
 }
 
 
-
 a {
     color: black;
 }
 
-  
+
 
 /* Write a blog section */
 /* .create-blog {
@@ -250,17 +249,12 @@ a {
     img {
         width: 100%
     }
-
-    .form-signup {
-        margin: 10px 0;
-    }
-
-    .form-signin {
-        margin: 10px 0;
+  
+    .container {
+        margin-top: 1px;
     }
 
 }
-
 
 @media only screen and (max-width: 300px) {
     #formular {

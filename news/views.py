@@ -4,6 +4,7 @@ from .models import Post
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .forms import CommentForm
 import requests
 #b336f8d783094ae1b6a923721064ccdd
 
@@ -32,6 +33,18 @@ class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
         form.instance.author = self.request.user
         form.instance.status = 0
         return super().form_valid(form)
+
+        return render(
+                request,
+                "post_detail.html",
+                {
+                    "post": post,
+                    "comments": comments,
+                    "commented": False,
+                    "liked": liked,
+                    "comment_form": CommentForm()
+                },
+            )
 
     def get_success_url(self):
         return reverse('thanks')
