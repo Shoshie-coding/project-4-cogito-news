@@ -1,28 +1,65 @@
 {% extends "base.html" %}
 
+{% load static %}
+
+
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<form method="post">
+<!-- <form method="post">
 
-<div class="container form-signup border border-primary d-flex justify-content-center p-5 mb-5"">
-    <div class="mb-3">
+    <div class="container form-signup d-flex justify-content-center">
+    <div class=" mb-3">
+        <div class="container py-5 h-100 h-custom">
             <h3 class="text-center">{% trans "Register" %}</h3>
-            <p>{% blocktrans %}Do you already have an account? You can <a
-                    class="link" href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}
+            <p>{% blocktrans %}Do you already have an account? You can <a class="link" href="{{ login_url }}">sign
+                    in</a> instead{% endblocktrans %}
             </p>
             <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
-                
+
                 <input type="hidden" name="{{ redirect_field_name }}" value="/multumescfrate" />
-              
+
                 <button class="btn btn-primary btn-block" type="submit">{% trans "Sign Up" %}</button>
             </form>
         </div>
     </div>
-</div>
+    </div>
+    </div> -->
+
+<section class="h-100 h-custom" style="background-color: cream;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+                    <img src="{% static 'images/aj-McsNra2VRQQ-unsplash.jpg' %}" class="w-100" style="border-top-left-radius: .2rem; border-top-right-radius: .2rem;"
+                        alt="Sample photo">
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class=" text-center mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">{% trans "Register" %}</h3>
+                        <p>{% blocktrans %}Do you already have an account? You can <a class="link"
+                                href="{{ login_url }}">sign
+                                in</a> instead{% endblocktrans %}
+                        </p>
+
+                        <div class="form-outline mb-4">
+                            <form class="px-md-2" id="signup_form" method="post" action="{% url 'account_signup' %}">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <input type="hidden" name="{{ redirect_field_name }}" value="/multumescfrate" />
+                        </div>
+
+                        <button class="btn btn-primary btn-block" type="submit">{% trans "Sign Up" %}</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
