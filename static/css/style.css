@@ -28,17 +28,7 @@ body {
 
 }
 
-.navbar-nav {
-    float:none;
-    margin:0 auto;
-    display: block;
-    text-align: center;
-}
 
-.navbar-nav > li {
-    display: inline-block;
-    float:none;
-}
 
 
 
@@ -287,6 +277,21 @@ a {
     }
 } 
 
+@media only screen and (min-width: 700px) {
+
+    .navbar-nav {
+        float:none;
+        margin:0 auto;
+        display: block;
+        text-align: center;
+    }
+
+    .navbar-nav > li {
+        display: inline-block;
+        float:none;
+    }
+
+}
 
 
 
