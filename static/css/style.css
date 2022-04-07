@@ -56,9 +56,8 @@ p {
 
 
 /* Hero image Home page */
-.jumbotron {
-    background-image: url('../images/vintage-g0ea6d6c92_1920.jpg'),
-        linear-gradient(to right, rgb(174, 184, 229), rgb(117, 235, 213));
+.hero-image {
+    background-image: url('../images/vintage-g0ea6d6c92_1920.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -79,7 +78,16 @@ p {
 }
 
 
+/* Hero image thank you for posting */
 
+.hero-image-thanks {
+    background: url('https://res.cloudinary.com/shosh-crissa/image/upload/v1649370982/post-thank-you_ndtdrf.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    height: 900px;
+}
 
 /* Main container section */
 
