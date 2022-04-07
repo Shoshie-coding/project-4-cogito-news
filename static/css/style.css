@@ -57,7 +57,7 @@ p {
 
 /* Hero image Home page */
 .jumbotron {
-    background-image: url(../images/vintage-g0ea6d6c92_1920.jpg),
+    background-image: url({% '../images/vintage-g0ea6d6c92_1920.jpg' %}),
         linear-gradient(to right, rgb(174, 184, 229), rgb(117, 235, 213));
     background-size: cover;
     background-position: center center;
