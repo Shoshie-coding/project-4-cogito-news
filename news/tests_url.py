@@ -9,9 +9,9 @@ class TesNewsUrls(SimpleTestCase):
         url = reverse('create')
         self.assertEquals(resolve(url).func.__name__, PostCreateView.as_view().__name__)
 
-    def test_stiri_url_is_resolved(self):
-        url = reverse('stiri', args=['technology'])
-        self.assertEquals(resolve(url).func, stiri)
+    def test_blogs_url_is_resolved(self):
+        url = reverse('blogs', args=['technology'])
+        self.assertEquals(resolve(url).func, blogs)
 
     def test_home_url_is_resolved(self):
         url = reverse('home')

@@ -87,7 +87,7 @@ def home(request):
 def thanks(request):
     return render(request, "thanks.html")
 
-def stiri(request, category):
+def blogs(request, category):
     user_posts = Post.objects.filter(category=category, status = 1)
 
     url = ('https://newsapi.org/v2/everything?'
@@ -99,7 +99,7 @@ def stiri(request, category):
     print(url)
     response = requests.get(url)
     print(response.json()['articles'])
-    return render(request, "stiri.html", {'data': response.json()['articles'], 'user_posts': user_posts})
+    return render(request, "blogs.html", {'data': response.json()['articles'], 'user_posts': user_posts})
 
 class PostList(generic.ListView):
     model = Post
