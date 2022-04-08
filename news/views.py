@@ -85,6 +85,11 @@ def home(request):
 def thanks(request):
     return render(request, "thanks.html")
 
+def delete_post(request, pk):
+    if request.method == "POST":
+        Post.objects.get(pk=int(pk)).delete()
+        return HttpResponseRedirect(reverse('myposts'))
+
 def blogs(request, category):
     user_posts = Post.objects.filter(category=category, status = 1)
 

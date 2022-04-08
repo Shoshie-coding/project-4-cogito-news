@@ -21,6 +21,10 @@
                             <p>{{item.excerpt}}</p>
 
                         </div>
+                        <form method="POST" action="{% url 'delete_post' item.id %}">
+                            {% csrf_token %}
+                            <button type="submit">DELETE</button>
+                        </form>
                         <a href="{% url 'Post_update' item.id %}" class="btn btn-primary">Update post</a>
                     </div>
 
@@ -40,6 +44,7 @@
                 </div>
             </div> -->
         </div>
+    </div>
     </div>
 
     {% endblock %}

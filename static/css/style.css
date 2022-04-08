@@ -203,12 +203,14 @@ a {
     }
 } 
 
+
+
 @media only screen and (max-width: 600px) {
     #formular {
-        width: 70px;
+        width: 100%;
         padding: 0;
         margin: 0;
-
+        border:none !important;
     }
 } 
 
@@ -233,11 +235,12 @@ a {
 /* Write a post page */ 
 
 #formular {
-    width: 600px;
+    max-width: 600px;
     margin: 20px auto;
     padding: 10px;
     border: solid 1px #23BBBB;
 }
+
 
 
 #formular label {
@@ -245,7 +248,7 @@ a {
 }
 
 #formular input {
-    width: 200px;
+  
     
 }
 
