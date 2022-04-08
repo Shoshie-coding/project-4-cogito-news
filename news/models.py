@@ -4,6 +4,8 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 CHOICES = [("Arts-culture", "Arts-culture"), ("Technology", "Technology"), ("Movies%20and%20Music", "Movies and Music"), ("Travel", "Travel")]
+
+
 class Post(models.Model):
     """
     Class represents the categories model
@@ -22,7 +24,6 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='blogpost_like', blank=True)
-
 
     class Meta:
         """

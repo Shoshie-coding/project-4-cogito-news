@@ -20,8 +20,6 @@ def PostLike(request, pk):
 
 
 
-
-
 class PostDetailView(generic.detail.DetailView):
     model = Post
     template_name = "post_detail.html"

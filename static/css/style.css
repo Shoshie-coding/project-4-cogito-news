@@ -1,10 +1,3 @@
-/* Universal Styles */
-
-body {
-
-    margin: 0;
-}
-
 /* Navbar styles */
 .navbar {
     font-family: 'Quattrocento Sans', Sans-Serif;
@@ -29,10 +22,12 @@ body {
 }
 
 
-
-
-
 /* General styles */
+
+body {
+
+    margin: 0;
+}
 
 h1 {
     font-family: 'Ovo', Serif;
@@ -52,12 +47,11 @@ p {
     text-align: left;
 }
 
-/* Header styles */
+/* Hero image styles */
 
-
-/* Hero image Home page */
+/* Hero image on Home page */
 .hero-image {
-    background-image: url('../images/vintage-g0ea6d6c92_1920.jpg');
+    background-image: url('https://res.cloudinary.com/shosh-crissa/image/upload/v1649365044/m2krwvoiwvvow3vtjcrd.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -68,7 +62,7 @@ p {
 
 /* Hero image on Create Post page */
 
-.bg-no-overlay {
+.hero-image-post {
     background: url('https://res.cloudinary.com/shosh-crissa/image/upload/v1649356701/daria-kraplak-d34DtRp1bqo-unsplash_rywins.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -76,7 +70,6 @@ p {
     color: #fff;
     height: 500px;
 }
-
 
 /* Hero image thank you for posting */
 
