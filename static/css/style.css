@@ -31,7 +31,6 @@ body {
 
 h1 {
     font-family: 'Ovo', Serif;
-    font-size: 250%;
     letter-spacing: 3px;
     margin: 10px 0 15;
 
@@ -43,7 +42,7 @@ h4,
 h5,
 h6,
 p {
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-family: 'Quattrocento Sans', Sans-Serif;
     text-align: left;
 }

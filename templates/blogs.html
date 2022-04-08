@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="content">
-                    <p>{{item.excerpt}}</p>
+                    <p text-justify>{{item.excerpt}}</p>
                     <a href="/{{item.slug}}" class="btn btn-primary" role="button">Read more</a>
 
                 </div>
@@ -33,7 +33,7 @@
             <div class="row my-2 mb-5 news-card">
                 <h3 class="m-1">{{item.title}}</h2>
                     <img src="{{item.urlToImage}}" />
-                    <p class="text-muted">{{item.content}}</p>
+                    <p class="text-justify text-muted">{{item.content}}</p>
                     <a href="{{item.url}}" class="btn btn-primary" role="button">View on source</a>
             </div>
             {% endfor %}
