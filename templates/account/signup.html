@@ -2,15 +2,13 @@
 
 {% load static %}
 
-
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
 
-
-<section class="h-100 h-custom" style="background-color: cream;">
+<section class="h-100 h-custom">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-lg-8 col-xl-6">
@@ -23,18 +21,14 @@
                                 href="{{ login_url }}">sign
                                 in</a> instead{% endblocktrans %}
                         </p>
-
                         <div class="form-outline mb-4">
                             <form class="px-md-2" method="post" action="{% url 'account_signup' %}">
                                 {% csrf_token %}
                                 {{ form.as_p }}
                                 <input type="hidden" name="{{ redirect_field_name }}" value="/multumescfrate" />
                         </div>
-
                         <button class="btn btn-primary btn-block" type="submit">{% trans "Sign Up" %}</button>
-
                         </form>
-
                     </div>
                 </div>
             </div>
