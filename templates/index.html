@@ -16,12 +16,11 @@
 <!-- Featured News section -->
 
 <div class="featured-news justify-content-center">
-
   <h1 class="text-center" style="margin-bottom: 25px;margin-top: 10px;">Discover our featured news</h1>
 
   <div class="row row-cols-1 row-cols-md-2">
     <div class="col mb-4">
-      <div class="card h-100"><a href="/stiri/Arts">
+      <div class="card h-100"><a href="/blogs/Arts-culture">
           <img src="{% static 'images/timon-klauser-3MAmj1ZKSZA-unsplash.jpg' %}" class="card-img-top"
             alt="Image of a painting portraying a woman">
           <div class="card-body">
@@ -30,7 +29,7 @@
         </a></div>
     </div>
     <div class="col mb-4">
-      <div class="card h-100"><a href="/stiri/Technology">
+      <div class="card h-100"><a href="/blogs/Technology">
           <img src="{% static 'images/ales-nesetril-Im7lZjxeLhg-unsplash.jpg' %}" class="card-img-top"
             alt="Image of a open laptop">
           <div class="card-body">
@@ -39,7 +38,7 @@
         </a></div>
     </div>
     <div class="col mb-4">
-      <div class="card h-100"><a href="/stiri/Movies and Music">
+      <div class="card h-100"><a href="/blogs/Movies and Music">
           <img src="{% static 'images/jon-tyson-A-obUh61bKw-unsplash.jpg' %}" class="card-img-top"
             alt="Picture of a scene cut">
           <div class="card-body">
@@ -48,7 +47,7 @@
         </a></div>
     </div>
     <div class="col mb-4">
-      <div class="card h-100"><a href="/stiri/Travel and Tourism">
+      <div class="card h-100"><a href="/blogs/Travel and Tourism">
           <img src="{% static 'images/annie-spratt-qyAka7W5uMY-unsplash.jpg' %}" class="card-img-top"
             alt="Image of camera, note-book, backpack and pen sitting on top on a map">
           <div class="card-body">
@@ -100,19 +99,6 @@
 
 </section>
 </div>
-<!--Pagination section-->
-{% if is_paginated %}
-<nav aria-label="Page navigation">
-  <ul class="pagination justify-content-center">
-    {% if page_obj.has_previous %}
-    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-    {% endif %}
-    {% if page_obj.has_next %}
-    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-    {% endif %}
-  </ul>
-</nav>
-{% endif %}
 
 
 
