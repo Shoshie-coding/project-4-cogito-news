@@ -4,37 +4,42 @@
 {% block content %}
 {% load cloudinary %}
 
-<div class="container justify-content-center">
-    <div class="col-md">
-        <h1 class="text-center mb-5">My Posts</h1>
-        {% for item in object_list %}
-        <div class="card" style="width: 30rem;">
-            <div class=" card-header">
-      
-            <p>{{item.title}}</p>
-            <div class="row">
-                <div class="col-sm-6">
-                    <img src="{{item.featured_image.url}}" />
+<div class="container justify-content-center my-2">
+    <div class="row">
+        <div class="col-md">
+            <h1 class="text-center mb-5">My Posts</h1>
+            {% for item in object_list %}
+            <div class="card" style="width: 30rem;">
+                <div class=" card-header">
+
+                    <p>{{item.title}}</p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img src="{{item.featured_image.url}}" />
+                        </div>
+                        <div class="col-sm-6">
+                            <p>{{item.excerpt}}</p>
+
+                        </div>
+                        <a href="{% url 'Post_update' item.id %}" class="btn btn-primary">Update post</a>
+                    </div>
+
+
                 </div>
-                <div class="col-sm-6">
-                <p>{{item.excerpt}}</p>
-              
-                </div>
-                <a href="{% url 'Post_update' item.id %}" class="btn btn-primary">Update post</a>
             </div>
-            
-                
-        </div>
+
+
+        
             {% endfor %}
 
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Create post</h5>
-                <p class="card-text">If you'd like to create a post instead, click here</p>
-                <a href="{% url 'create' %}" class="btn btn-primary">Create post</a>
-            </div>
+            <!-- <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">blogs</h5>
+                    <p class="card-text">If you'd like to create a post instead, click here</p>
+                    <a href="{% url 'create' %}" class="btn btn-primary">Create post</a>
+                </div>
+            </div> -->
         </div>
     </div>
-</div>
 
-{% endblock %}
+    {% endblock %}

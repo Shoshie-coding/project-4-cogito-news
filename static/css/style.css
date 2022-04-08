@@ -86,7 +86,8 @@ p {
     background-size: cover;
     background-position: center center;
     color: #fff;
-    height: 900px;
+    height: 700px;
+    margin-bottom: 0;
 }
 
 /* Main container section */
