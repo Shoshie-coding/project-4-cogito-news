@@ -1,3 +1,4 @@
+import requests
 from django.shortcuts import render, reverse, get_object_or_404
 from django.views import generic, View
 from .models import Post
@@ -6,7 +7,6 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import CommentForm
-import requests
 #b336f8d783094ae1b6a923721064ccdd
 
 def PostLike(request, pk):
@@ -125,4 +125,3 @@ class ArticleDetailView(View):
     """
     model = Post()
     template_name = 'article_details.html'
-    
