@@ -41,6 +41,7 @@ h2,
 h3,
 h4,
 h5,
+h6,
 p {
     letter-spacing: 3px;
     font-family: 'Quattrocento Sans', Sans-Serif;
@@ -181,6 +182,14 @@ a {
 }
 
 /* Media queries */
+
+@media only screen and (max-width: 600px) {
+    .news-card {
+        margin: 8px 0;
+    }
+
+}
+
 
 @media only screen and (max-width: 600px) {
 

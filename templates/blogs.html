@@ -5,17 +5,21 @@
 {% load cloudinary %}
 
 <div class="container container-fluid justify-content-center">
-    <div class="row">
+    <div class="row gx-5">
         <div class="col-md-7">
             {% for item in user_posts %}
             <div class="blog_post">
                 <div class="featured">
-                    <h1 class="title">{{item.title}}</h1>
-                    <img src="{{item.featured_image.url}}" />
+                    <h1 class="text-center title">{{item.title}}</h1>
+                    <div class="shadow-2-strong rounded-5"><img
+                            src="{{item.featured_image.url}}" class="img-fluid">
+                        <div class="mask"></div>
+                    </div>
                 </div>
                 <div class="content">
                     <p>{{item.excerpt}}</p>
-                    <a href="/{{item.slug}}">Read more</a>
+                    <a href="/{{item.slug}}" class="btn btn-primary" role="button">Read more</a>
+
                 </div>
 
             </div>
@@ -24,14 +28,13 @@
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-4">
-            <h3>News</h3>
-
+            <h1 class="mt-2">News from around the world</h1>
             {% for item in data %}
-            <div class="">
-                <p>{{item.title}}</p>
-                <img src="{{item.urlToImage}}" />
-                <p>{{item.content}}</p>
-                <a href="{{item.url}}">View on source</a>
+            <div class="row my-2 mb-5 news-card">
+                <h3 class="m-1">{{item.title}}</h2>
+                    <img src="{{item.urlToImage}}" />
+                    <p class="text-muted">{{item.content}}</p>
+                    <a href="{{item.url}}" class="btn btn-primary" role="button">View on source</a>
             </div>
             {% endfor %}
         </div>
@@ -39,3 +42,5 @@
 </div>
 
 {% endblock %}
+
+
