@@ -76,8 +76,8 @@ class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
     def get_success_url(self):
         return reverse('thanks')
 
-def multam(request):
-    return render(request, "multam.html")
+def thankyou(request):
+    return render(request, "thankyou.html")
 
 def home(request):
     return render(request, "index.html")

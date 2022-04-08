@@ -8,10 +8,11 @@ urlpatterns = [
     path("blogs/<str:category>", views.blogs, name="blogs"),
     path("myposts", views.MyPostList.as_view(), name="myposts"),
     path('update/<slug:pk>/', views.PostUpdateView.as_view(), name='Post_update'),
-    path('<slug:slug>/', views.PostDetailView.as_view(), name='Post_detail'),
+   
     path('post-like/<int:pk>', views.PostLike, name="post_like"),
     path("thanks", views.thanks, name="thanks"),
-    path("thanks-user", views.thankyou, name="thankstoyou")
+    path("thanksuser", views.thankyou, name="thankstoyou"),
+     path('<slug:slug>/', views.PostDetailView.as_view(), name='Post_detail'),
 ]
 
 
