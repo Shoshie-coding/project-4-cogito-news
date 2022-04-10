@@ -7,12 +7,12 @@
 <div class="container container-fluid justify-content-center">
     <div class="row gx-5">
         <div class="col-md-7">
+
             {% for item in user_posts %}
             <div class="blog_post">
                 <div class="featured">
                     <h1 class="text-center title">{{item.title}}</h1>
-                    <div class="shadow-2-strong rounded-5"><img
-                            src="{{item.featured_image.url}}" class="img-fluid">
+                    <div class="shadow-2-strong rounded-5"><img src="{{item.featured_image.url}}" class="img-fluid">
                         <div class="mask"></div>
                     </div>
                 </div>
@@ -21,24 +21,26 @@
                     <a href="/{{item.slug}}" class="btn btn-primary" role="button">Read more</a>
                 </div>
             </div>
-
+            
             {% endfor %}
         </div>
+
         <div class="col-md-1"></div>
         <div class="col-md-4">
             <h1 class="mt-2">News from around the world</h1>
             {% for item in data %}
+
             <div class="row my-2 mb-5 news-card">
-                <h3 class="m-1">{{item.title}}</h2>
-                    <img src="{{item.urlToImage}}" />
-                    <p class="text-justify text-muted">{{item.content}}</p>
-                    <a href="{{item.url}}" class="btn btn-primary" role="button">View on source</a>
+                <h3 class="m-1">{{item.title}}</h3>
+                <img src="{{item.urlToImage}}" />
+                <p class="text-justify text-muted">{{item.content}}</p>
+                <a href="{{item.url}}" target="_blank" rel="noopener" aria-label="Visit source to read full article"
+                    class="btn btn-primary" role="button">View on source</a>
             </div>
+
             {% endfor %}
         </div>
     </div>
 </div>
 
 {% endblock %}
-
-
