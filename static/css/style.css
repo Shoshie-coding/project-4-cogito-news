@@ -51,13 +51,15 @@ p {
 
 /* Hero image on Home page */
 .hero-image {
-    background-image: url('https://res.cloudinary.com/shosh-crissa/image/upload/v1649365044/m2krwvoiwvvow3vtjcrd.jpg');
+    background: url('https://res.cloudinary.com/shosh-crissa/image/upload/v1649639942/library-image_fjjbol.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #fff;
     height: 500px;
+}
+
 }
 
 /* Hero image on Create Post page */
@@ -181,6 +183,20 @@ a {
 }
 
 /* Media queries */
+
+/* @media only screen and (min-width: 480px) {
+    .hero-image {
+        background-image: url('https://res.cloudinary.com/shosh-crissa/image/upload/v1649637837/typewriter-small-size_fkqmgf.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #fff;
+        height: 500px;
+    }
+
+} */
+
 
 @media only screen and (max-width: 600px) {
     .news-card {
