@@ -30,9 +30,9 @@
                              <a href="{% url 'Post_update' item.id %}" class="btn btn-primary">Update post</a>
                         </div>
                         <div class="col-sm-4">
-                            <form method="POST" action="{% url 'delete_post' item.id %}">
+                            <form id="form" method="POST" action="{% url 'delete_post' item.id %}">
                                 {% csrf_token %}
-                                <button type="submit" class="btn btn-danger">DELETE</button> 
+                                <button id="delete" type="submit" class="btn btn-danger">DELETE</button> 
         
                             </form>
                         </div>
@@ -56,5 +56,13 @@
     </div>
 </div>
 </div>
-
+<script>
+    jQuery(function() {
+   jQuery("#delete").click(function(){
+      if (confirm("Are you sure you want to delete this post?")){
+         jQuery('#form').submit();
+      }
+   });
+});
+</script>
 {% endblock %}
