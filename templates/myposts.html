@@ -58,9 +58,11 @@
 </div>
 <script>
     $(function() {
-   $("#delete").click(function(){
+   $("#delete").click(function(evt){
       if (confirm("Are you sure you want to delete this post?")){
          $('#form').submit();
+      } else {
+          evt.preventDefault();
       }
    });
 });
