@@ -60,9 +60,6 @@ p {
     height: 500px;
 }
 
-
-/* Hero image on home page */
-
 .write-post {
     background: url('https://res.cloudinary.com/shosh-crissa/image/upload/v1649642520/pen-image_djrdi4.jpg');
     background-size: cover;
@@ -194,19 +191,6 @@ a {
 }
 
 /* Media queries */
-
-/* @media only screen and (min-width: 480px) {
-    .hero-image {
-        background-image: url('https://res.cloudinary.com/shosh-crissa/image/upload/v1649637837/typewriter-small-size_fkqmgf.jpg');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        color: #fff;
-        height: 500px;
-    }
-
-} */
 
 
 @media only screen and (max-width: 600px) {
