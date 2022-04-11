@@ -118,12 +118,23 @@ a {
     color: black;
 }
 
+/* Post detail page */
 
-/* Contact us section */
-.contact-us-section h2 {
-    font-size: 2.5rem;
-    margin: 50px;
-    text-align: center;
+.post-container {
+    text-align: justify;
+    margin: 50px auto;
+    border: none;
+    max-width: 860px;
+    letter-spacing: 1px;
+    line-height: 1.50;
+    height: 100%;
+    color: black;
+}
+
+.post-img {
+    display: block;
+    max-width: 60%;
+    margin: 15px auto;
 
 }
 

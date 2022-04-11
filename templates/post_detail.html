@@ -4,27 +4,28 @@
 
 
 {% block content %}
-<div class="row">
-    <h3>{{object.title}}</h3>
-    <img src="{{object.featured_image.url}}" />
-    <p>{{object.content}}</p>
+<div class="post-container">
+  <h2 class="mt-2 mb-4">{{object.title}}</h2>
+  <img src="{{object.featured_image.url}}" class="post-img" />
+  <p class="post">{{object.content}}</p>
 
 
-<!-- LIKES -->
-{% if user.is_authenticated %}
+  <!-- LIKES -->
+  {% if user.is_authenticated %}
   <form action="{% url 'post_like' object.id %}" method="POST">
-	{% csrf_token %}
+    {% csrf_token %}
 
-	{% if post_is_liked %}
-	<button type="submit" name="post_id" value="{{object.id}}" class="btn btn-info">Unlike</button>
-	{% else %}
-	<button type="submit" name="post_id" value="{{object.id}}" class="btn btn-info">Like</button>
-	{% endif %}
+    {% if post_is_liked %}
+    <button type="submit" name="post_id" value="{{object.id}}" class="btn btn-primary">Unlike</button>
+    {% else %}
+    <button type="submit" name="post_id" value="{{object.id}}" class="btn btn-primary">Like</button>
+    {% endif %}
   </form>
-{% else %}
-  <a class="btn btn-outline-info" href="{% url 'account_login' %}?next={{request.path}}">Log in to like this article!</a><br>
-{% endif %}
-<strong class="text-secondary">{{ number_of_likes }} Like{{ number_of_likes|pluralize }}</strong>
+  {% else %}
+  <a class="btn btn-primary" href="{% url 'account_login' %}?next={{request.path}}">Log in to like this
+    article!</a><br>
+  {% endif %}
+  <strong class="text-secondary">{{ number_of_likes }} Like{{ number_of_likes|pluralize }}</strong>
 
 
 
