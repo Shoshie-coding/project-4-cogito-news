@@ -60,9 +60,20 @@ p {
     height: 500px;
 }
 
+
+/* Hero image on home page */
+
+.write-post {
+    background: url('https://res.cloudinary.com/shosh-crissa/image/upload/v1649642520/pen-image_djrdi4.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: black;
+    height: 350px;
+    margin: 0;
 }
 
-/* Hero image on Create Post page */
 
 .hero-image-post {
     background: url('https://res.cloudinary.com/shosh-crissa/image/upload/v1649356701/daria-kraplak-d34DtRp1bqo-unsplash_rywins.jpg');
