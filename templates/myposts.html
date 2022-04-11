@@ -10,17 +10,18 @@
             <h1 class="title text-center mb-5">My Posts</h1>
 
             {% for item in object_list %}
-            <div class="card" style="width: 30rem;">
-                <h3>{{item.title}}</h3>
 
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="shadow-2-strong rounded-5"><img src="{{item.featured_image.url}}" class="img-fluid">
-                        </div>
+
+            <div class="blog_post">
+                <div class="featured">
+                    <h1 class="text-center title">{{item.title}}</h1>
+                    <div class="shadow-2-strong rounded-5"><img src="{{item.featured_image.url}}" class="img-fluid">
+                        <div class="mask"></div>
                     </div>
-                    <div class="col-sm-6">
-                        <p>{{item.excerpt}}</p>
-                    </div>
+                </div>
+                <div class="content">
+                    <p class='text-justify'>{{item.excerpt}}</p>
+                    <a href="/{{item.slug}}" class="btn btn-primary" role="button">Read more</a>
                     <form method="POST" action="{% url 'delete_post' item.id %}">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-danger">DELETE</button> 
@@ -28,9 +29,16 @@
                     </form>
                     <a href="{% url 'Post_update' item.id %}" class="btn btn-primary">Update post</a>
                 </div>
-
             </div>
-        </div>
+            
+
+
+
+
+
+            
+
+   
 
         {% endfor %}
 
