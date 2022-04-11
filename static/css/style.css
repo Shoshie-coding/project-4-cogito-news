@@ -21,11 +21,9 @@
 
 }
 
-
 /* General styles */
 
 body {
-
     margin: 0;
 }
 
@@ -33,7 +31,6 @@ h1 {
     font-family: 'Ovo', Serif;
     letter-spacing: 3px;
     margin: 10px 0 15;
-
 }
 
 h2,
@@ -70,7 +67,6 @@ p {
     height: 350px;
     margin: 0;
 }
-
 
 .hero-image-post {
     background: url('https://res.cloudinary.com/shosh-crissa/image/upload/v1649356701/daria-kraplak-d34DtRp1bqo-unsplash_rywins.jpg');
@@ -189,7 +185,6 @@ a {
 
 /* Link styles */
 
-
 .link {
     color: #23BBBB;
     text-decoration: none;
@@ -202,7 +197,6 @@ a {
 }
 
 /* Media queries */
-
 
 @media only screen and (max-width: 600px) {
     .news-card {
@@ -234,7 +228,6 @@ a {
 } 
 
 
-
 @media only screen and (max-width: 600px) {
     #formular {
         width: 100%;
@@ -261,7 +254,6 @@ a {
 }
 
 
-
 /* Write a post page */ 
 
 #formular {
@@ -272,22 +264,13 @@ a {
 }
 
 
-
 #formular label {
     color: red;
 }
 
-#formular input {
-  
-    
-}
-
-
-
 .news-section {
     margin: 20px 20px;
 }
-
 
 .blog_post {
     margin-top: 80px;
@@ -296,7 +279,6 @@ a {
 .blog_post .featured {
     position: relative;
 }
-
 
 .blog_post img {
     width: 100%;
