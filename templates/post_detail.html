@@ -9,7 +9,6 @@
   <img src="{{object.featured_image.url}}" class="post-img" />
   <p class="post">{{object.content}}</p>
 
-
   <!-- LIKES -->
   {% if user.is_authenticated %}
   <form action="{% url 'post_like' object.id %}" method="POST">
@@ -26,8 +25,6 @@
     article!</a><br>
   {% endif %}
   <strong class="text-secondary">{{ number_of_likes }} Like{{ number_of_likes|pluralize }}</strong>
-
-
 
 </div>
 {% endblock %}
