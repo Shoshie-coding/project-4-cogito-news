@@ -91,6 +91,11 @@ After, signing up User is sent to a thank you page with a button that goes to th
 
 I kept the design clean and elegant, tipography is Quattrocento Sans', fall back on Sans-Serif and Ovo with fallback on Serif.
 
+## Testing
+
+### Validator testing 
+### HTML 
+
 
 
 
