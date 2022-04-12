@@ -144,7 +144,7 @@ a {
     color: #0339A6;
     padding: 40px 0;
     text-align: center;
-    margin: 0;
+    
 }
 
 .main-footer li {
@@ -241,7 +241,7 @@ a {
 
     .navbar-nav {
         float:none;
-        margin:0 auto;
+        margin: 0 auto;
         display: block;
         text-align: center;
     }
