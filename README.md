@@ -9,22 +9,48 @@ You can view the live website [here](https://cogito-news.herokuapp.com/).
 ## **About this project**
 This is a full stack website build uinsg Django, Python, Postgres SQL, Bootstrap, Javascript, HTML and CSS.
 This project allows users to sign up and login to the website, create their own posts and chose a categpry for their posts. Users are also able to read and like posts from other users. I've implemented a news API so that users can view news around the world based on 4 categories: Arts and Culture, Technology, Movies and Music and Travel. 
+This website is for all those who are interested in the categories oulined above and who want to discover news from around the world at the same time as reading blogs written by users. 
 
 ## **UX design**
 In building this website, I've followed the principles of UX design and implemented features that are responsive, are visually pleasing and overall create a good experience for the User.
 
 ## **User Stories**
-The following User Stories 
+The following User Stories have been used to organise and create this project
 
+- **As a Site User I can like posts so that I can show my appreciation for the post** 
+- **As a User I can easily navigate the website so that I can go from one page to another**
+- **As a Site User I can click on View more to open a post so that I can read what's in it**
+- **As a Site User I can sign up for an account so that I can like posts and create my own posts**
+- **As a Site Admin I can update and delete posts so that I can moderate and website content**
+- **As a Site Admin I can create drafts so that I can finish my writing later**
+- **As a Site Admin I can create a Superuser so that I can manage posts and approve comments**
+- **As a Site User I can view a list of posts that are available on the website so that I can select one to read**
+- **As a Site User / Admin I can view the likes on each post so that I can see which are the most popular posts**
+- **As a Site user / Site Admin I can select a category on the home page so that I can browse news from various sources**
+- **As a Site User I can see the news from the world and click on View on Source to read the full story at its source**
+- **As a **User** I can **see that I'm signed in** so that ** I can see my status on the website and log out from the website**
 
+## Scope and Main Features
+
+I used the MVP model on my website and the features are as follows:
 
 - **Header image and Navigation Bar** 
-The header image provides visual stimulation and sets the color theme for the whole website. This theme is present on all the pages of the website providing consistency for the users. 
-The Navigation Bar is featured on all three pages, it includes links to Home page, Hebrew language page and the Common Hebrew Phrases page. It is fully responsive and allows users to navigate seamlessly between pages.
-![Header image and nav bar screenshot](assets/images/feature-header-nav-bar-screenshot.png) 
+Designed mainly using Bootstrap and CSS, the navbar is responsive on all devices, featuring a collapsible menu and a hamburger style menu on smaller devices like tablets and phones.
+You can navigate from the navbar to all the main pages on the website. 
+When User is not logged in, they will see options to Sign in and Register.
+![Main heading and image](static/images/navbar-hero-image-screenshot.png)
 
-- The **main heading and image** introduce the user to the Hebrew language and the theme of the website. 
-![Main heading and image](assets/images/feature-main-heading-image.png)
+- **Header image and Navigation Bar - User is logged in** 
+When User is logged in, they will see additional options to Create post, My posts and Log out. 
+![Main heading and image](static/images/navbar-hero-image-screenshot.png)
+
+- **Sign in / Sign up / Logout**
+When user wants to log, log out and sign up - user will see a responsive form to do so
+![Main heading and image](static/images/log-out-screenshot.png)
+
+
+
+
 
 - The **main points menu** on the Home and Alphabet pages provides a summary of what is discussed on each of these pages and links to those sections.
 ![Main points home page](assets/images/feature-main-points-home.png)
