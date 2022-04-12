@@ -13,8 +13,8 @@
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-lg-8 col-xl-6">
                 <div class="card rounded-3">
-                    <img src="{% static 'images/cherry-blossom-img.jpg' %}" class="w-100" alt="image of cherry blossom" style="border-top-left-radius: .2rem; border-top-right-radius: .2rem;"
-                        alt="Sample photo">
+                    <img src="{% static 'images/cherry-blossom-img.jpg' %}" class="w-100" alt="image of cherry blossom"
+                        style="border-top-left-radius: .2rem; border-top-right-radius: .2rem;" alt="Sample photo">
                     <div class="card-body ">
                         <h3 class="text-center mt-1 mb-4">{% trans "Register" %}</h3>
                         <p>{% blocktrans %}Do you already have an account? You can <a class="link"
@@ -26,9 +26,9 @@
                                 {% csrf_token %}
                                 {{ form.as_p }}
                                 <input type="hidden" name="{{ redirect_field_name }}" value="/confirm" />
+                                <button class="btn btn-primary btn-block" type="submit">{% trans "Sign Up" %}</button>
+                            </form>
                         </div>
-                        <button class="btn btn-primary btn-block" type="submit">{% trans "Sign Up" %}</button>
-                        </form>
                     </div>
                 </div>
             </div>
