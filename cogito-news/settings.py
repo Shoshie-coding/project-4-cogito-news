@@ -93,8 +93,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'cogito-news.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+#Database
+#https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 # DATABASES = {
 #     'default': {

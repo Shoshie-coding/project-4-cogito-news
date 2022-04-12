@@ -12,5 +12,5 @@ urlpatterns = [
     path('post-like/<int:pk>', views.PostLike, name="post_like"),
     path("thanks", views.thanks, name="thanks"),
     path("confirm", views.thankyou, name="thankstoyou"),
-    path('<slug:slug>', views.PostDetailView.as_view(), name='Post_detail'),
+    path('blog/<slug:slug>', views.PostDetailView.as_view(), name='Post_detail'),
 ]
