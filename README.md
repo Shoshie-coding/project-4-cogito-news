@@ -28,56 +28,94 @@ The following User Stories have been used to organise and create this project
 - **As a Site User / Admin I can view the likes on each post so that I can see which are the most popular posts**
 - **As a Site user / Site Admin I can select a category on the home page so that I can browse news from various sources**
 - **As a Site User I can see the news from the world and click on View on Source to read the full story at its source**
-- **As a **User** I can **see that I'm signed in** so that ** I can see my status on the website and log out from the website**
+- **As a **User** I can see that I'm signed in so that ** I can see my status on the website and log out from the website**
+- **As a site user I receive a thank you page when I post a post so that I know my post was received and an admin is looking at the post**
+-**As a site user I can access the posts I created under My posts, so I can read more, update and delete a post**
 
-## Scope and Main Features
+## Main Features and respective manual testing
 
-I used the MVP model on my website and the features are as follows:
+I used the MVP model on my website. I have used a mix of Unitesting for the main features and manual testing for all features. 
 
 - **Header image and Navigation Bar** 
 Designed mainly using Bootstrap and CSS, the navbar is responsive on all devices, featuring a collapsible menu and a hamburger style menu on smaller devices like tablets and phones.
 You can navigate from the navbar to all the main pages on the website. 
 When User is not logged in, they will see options to Sign in and Register.
-![Main heading and image](static/images/navbar-hero-image-screenshot.png)
+![Hero image and navbar](static/images/navbar-hero-image-screenshot.png)
 
 - **Header image and Navigation Bar - User is logged in** 
 When User is logged in, they will see additional options to Create post, My posts and Log out. 
-![Main heading and image](static/images/navbar-hero-image-screenshot.png)
+![User logged in - navbar](static/images/navbar-hero-image-screenshot.png)
 
 - **Sign in / Sign up / Logout**
 When user wants to log, log out and sign up - user will see a responsive form to do so
-![Main heading and image](static/images/log-out-screenshot.png)
+![Log-out](static/images/log-out-screenshot.png)
+![Sign-in](static/images/sign-in-screenshot.png)
+![Sign-up](static/images/sign-up-screenshot.png)
 
+- **Featured news and blogs**
+User can access the 4 main categories from the home page
+![Featured news and blogs](static/images/featured-news-blogs-screenshot.png)
 
+- **Write a post**
+Users need to create an account that enables them to write posts
+![Write a post](static/images/write-blog-screenshot.png)
 
+-**Write post call to action post on the Home page**
+![Call to action](static/images/call-toaction-screenshot.png)
 
+-**Categories and blogs page**
+User can navigate to all categories from the categories page and User can read the blogs in a new page
+![Categories pages](static/images/categories-page-screenshot.png)
 
-- The **main points menu** on the Home and Alphabet pages provides a summary of what is discussed on each of these pages and links to those sections.
-![Main points home page](assets/images/feature-main-points-home.png)
-![Main points home page](assets/images/feature-main-points-alphabet.png)
+-**Thanks message after posting**
+![Thank you message](static/images/thanks-posting-screenshot.png)
+User receices a message after posting 
 
-- The **alphabet table** that lists all the letters of the Hebrew alphabet with their pronunciation which is responsive and easy to read on small screen sizes. 
-![Alphabet table](assets/images/feature-alphabet-table.png) 
+-**View My posts**
+![My posts](static/images/my-posts-screenshot.png)
 
-- The **listening and speaking** practice section on the Alphabet page with links to YouTube videos. 
-![Main points home page](assets/images/feature-listening-speaking.png)
+-**Django admin panel**
+Site Superuser can login to django and see all their posts and their statuses.
+![Admin Panel](static/images/django-admin-panel-screenshot.png)
 
-- The **two images sorrounded by content** on the Common Hebrew Phrases page
-![First image words page](assets/images/feature-first-image-words-page.png)
-![Second image words page](assets/images/feature-second-image-words-page.png)
+-**Django change post**
+Site super User can read, delete and edit the posts from users 
+![Admin Panel](static/images/change-options-screenshot.png)
+![Admin Panel](static/images/confirmation-admin-screenshot.png)
 
-- The **footer** that is visible on all pagesa and contains links to social media accounts and copyrights info. 
-![Footer](assets/images/feature-footer.png)
-
-### **Features left to implement**
-- Contact page - we want to implement a contact page for users to contact the page for info on Hebrew language and civilization and for Hebrew classes we are organising regularly.
-- Resource page with info on audio and video resources people can use to learn Hebrew language and articles.
+-**Message after signing up**
+After, signing up User is sent to a thank you page with a button that goes to the Home page.
+![Admin Panel](static/images/signup-thanks-screenshot.png)
 
 ## Design
-- ### **Color Theme and imagery**
-[Adobe Color](https://color.adobe.com/create/color-wheel) was used to extract the main three colors of the website: blue, cream and dark brown. The colors were extracted using images on the website. These are old Hebrew manuscripts and Hebrew illuminated manuscripts that show the beauty of the Hebrew alphabet and Jewish art. 
 
-- ### **Typography**
+I kept the design clean and elegant, tipography is Quattrocento Sans', fall back on Sans-Serif and Ovo with fallback on Serif.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-
 For the main text, 'Montserrat' font is used with a fall-back on sans-serif. For headings, navigation bar and footer, 'Arima Madurai' font is used with a fallback on cursive.
 
 ## **Technologies**
