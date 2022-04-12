@@ -1,6 +1,4 @@
-
 # **Cogito, ergo sum**
-
 
 You can view the live website [here](https://cogito-news.herokuapp.com/).
 
@@ -34,7 +32,7 @@ The following User Stories have been used to organise and create this project
 
 ## Main Features and respective manual testing
 
-I used the MVP model on my website. I have used a mix of Unitesting for the main features and manual testing for all features. 
+I used the MVP model on my website. I have used a mix of Simple Tests in Django for the main features and manual testing for all features. 
 
 - **Header image and Navigation Bar** 
 Designed mainly using Bootstrap and CSS, the navbar is responsive on all devices, featuring a collapsible menu and a hamburger style menu on smaller devices like tablets and phones.
@@ -95,6 +93,30 @@ I kept the design clean and elegant, tipography is Quattrocento Sans', fall back
 
 ### Validator testing 
 ### HTML 
+
+### CSS
+![CSS Validator](static/images/CSS-validator.png)
+![Pp8](static/images/Pep8-1.png)
+
+
+### Python
+Python code was validated using Pep8 validator online.
+Most errors were around the long code lines, i've left these as they are they don't impede with website's core functionality. 
+
+
+## Wireframes 
+
+
+## Known Bugs 
+
+Another feature I've implemented is delete confirmation modal with Jquery.
+The code is on the My posts page - when deleting a post the modal should pop up asking the User to confirm if they indeed want to delete the post.
+The code works in the console but not on the website itself. I've left the code on my website for reference. 
+
+
+
+
+
 
 
 

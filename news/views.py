@@ -7,7 +7,8 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import CommentForm
-#b336f8d783094ae1b6a923721064ccdd
+# b336f8d783094ae1b6a923721064ccdd
+
 
 def PostLike(request, pk):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
@@ -17,7 +18,6 @@ def PostLike(request, pk):
         post.likes.add(request.user)
 
     return HttpResponseRedirect(reverse('Post_detail', args=[post.slug]))
-
 
 
 class PostDetailView(generic.detail.DetailView):
@@ -34,7 +34,6 @@ class PostDetailView(generic.detail.DetailView):
         data['number_of_likes'] = likes_connected.number_of_likes()
         data['post_is_liked'] = liked
         return data
-
 
 
 class PostUpdateView(LoginRequiredMixin, generic.edit.UpdateView):
@@ -76,40 +75,44 @@ class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
     def get_success_url(self):
         return reverse('thanks')
 
+
 def thankyou(request):
     return render(request, "thankyou.html")
+
 
 def home(request):
     return render(request, "index.html")
 
+
 def thanks(request):
     return render(request, "thanks.html")
+
 
 def delete_post(request, pk):
     if request.method == "POST":
         Post.objects.get(pk=int(pk)).delete()
         return HttpResponseRedirect(reverse('myposts'))
 
+
 def blogs(request, category):
     user_posts = Post.objects.filter(category=category, status = 1)
-
     url = ('https://newsapi.org/v2/everything?'
-       'q={}&'
-       'from=2022-03-28&'
-       'sortBy=popularity&'
-       'pageSize=5&'
-       'apiKey=b336f8d783094ae1b6a923721064ccdd'.format(category))
+           'q={}&'
+           'from=2022-03-28&'
+           'sortBy=popularity&'
+           'pageSize=5&'
+           'apiKey=b336f8d783094ae1b6a923721064ccdd'.format(category))
     print(url)
     response = requests.get(url)
     print(response.json()['articles'])
     return render(request, "blogs.html", {'data': response.json()['articles'], 'user_posts': user_posts})
+
 
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 5
-
 
 
 class MyPostList(generic.ListView):
@@ -119,9 +122,11 @@ class MyPostList(generic.ListView):
     def get_queryset(self):
         return Post.objects.filter(author=self.request.user)
 
+
 class ArticleDetailView(View):
     """
     View for an individual article page
     """
     model = Post()
     template_name = 'article_details.html'
+    
