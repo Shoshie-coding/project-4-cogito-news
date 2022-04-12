@@ -13,7 +13,7 @@
             <div class="blog_post">
                 <div class="featured">
                     <h1 class="text-center title">{{item.title}}</h1>
-                    <div class="shadow-2-strong rounded-5"><img src="{{item.featured_image.url}}" class="img-fluid">
+                    <div class="shadow-2-strong rounded-5"><img src="{{item.featured_image.url}}" class="img-fluid" alt="blog image">
                         <div class="mask"></div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
 
             <div class="row my-2 mb-5 news-card">
                 <h3 class="m-1">{{item.title}}</h3>
-                <img src="{{item.urlToImage}}" />
+                <img src="{{item.urlToImage}}" alt="news image"/>
                 <p class="text-justify text-muted">{{item.content}}</p>
                 <a href="{{item.url}}" target="_blank" rel="noopener" aria-label="Visit source to read full article"
                     class="btn btn-primary" role="button">View on source</a>
