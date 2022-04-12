@@ -29,6 +29,15 @@ The following User Stories have been used to organise and create this project
 - **As a site user I receive a thank you page when I post a post so that I know my post was received and an admin is looking at the post**
 -**As a site user I can access the posts I created under My posts, so I can read more, update and delete a post**
 
+## Wireframes 
+-**Home page**
+![Wireframe](static/images/wireframe-1.png)
+-**Read more / View on source / Sign in / Log out / Sign up**
+![Wireframe](static/images/wireframe-2.png)
+-**Read post / Create post**
+![Wireframe](static/images/wireframe-3.png)
+
+
 ## Main Features and respective manual testing
 
 I used the MVP model on my website. I have used a mix of Simple Tests in Django for the main features and manual testing for all features. 
@@ -68,6 +77,10 @@ User can navigate to all categories from the categories page and User can read t
 ![Thank you message](static/images/thanks-posting-screenshot.png)
 User receices a message after posting 
 
+-**Message after signing up**
+After, signing up User is sent to a thank you page with a button that goes to the Home page.
+![Admin Panel](static/images/signup-thanks-screenshot.png)
+
 -**View My posts**
 ![My posts](static/images/my-posts-screenshot.png)
 
@@ -80,18 +93,44 @@ Site super User can read, delete and edit the posts from users
 ![Admin Panel](static/images/change-options-screenshot.png)
 ![Admin Panel](static/images/confirmation-admin-screenshot.png)
 
--**Message after signing up**
-After, signing up User is sent to a thank you page with a button that goes to the Home page.
-![Admin Panel](static/images/signup-thanks-screenshot.png)
 
 ## Design and tipography
 
 I kept the design clean and elegant, tipography is Quattrocento Sans', fall back on Sans-Serif and Ovo with fallback on Serif.
 
+## **Technologies**
+#### **Languages Used**
+- [HTML](https://en.wikipedia.org/wiki/HTML5) 
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [Django](https://www.djangoproject.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Javascript](https://www.javascript.com/)
+- [News API](https://newsapi.org/)
+- [Heroku](https://dashboard.heroku.com/apps)
+
+#### **Frameworks, Libraries & Programs Used**
+
+1. [Google Fonts](https://fonts.google.com/) was used to import fonts 'Montserrat'and 'Arima Madurai' that are used throughout the website. 
+
+2. [Adobe color](https://color.adobe.com/mythemes) was used to extract the colors used on the website. 
+3. [Git](https://git-scm.com/) was used to used to edit the code on the Gitpod terminal, to commit to Git and Push to GitHub.
+
+4. [GitHub](https://github.com/) is used to store the project code after being pushed from Git. 
+
+
 ## Testing
 
 ### Validator testing 
 ### HTML 
+There is an error message on create post page when checking with the code validator. There isn't however an issue with the page's functionality.
+![HTML Validator](static/images/HTML-1.png)
+![HTML Validator](static/images/HTML-2.png)
+![HTML Validator](static/images/HTML-3.png)
+![HTML Validator](static/images/HTML-4.png)
+![HTML Validator](static/images/HTML-5.png)
+![HTML Validator](static/images/HTML-6.png)
+![HTML Validator](static/images/HTML-7.png)
+
 
 ### CSS
 ![CSS Validator](static/images/CSS-validator.png)
@@ -110,31 +149,6 @@ Most errors were around the long code lines, i've left these as they are they do
 ![Pep8](static/images/pep8-9.png)
 ![Pep8](static/images/pep8-10.png)
 ![Pep8](static/images/pep8-11.png)
-
-## Wireframes 
-
-
-
-## **Technologies**
-#### **Languages Used**
-- [HTML](https://en.wikipedia.org/wiki/HTML5) 
-- [CSS](https://en.wikipedia.org/wiki/CSS)
-- [Django](https://www.djangoproject.com/)
-- [Bootstrap](https://getbootstrap.com/)
-- [Javascript](https://www.javascript.com/)
-- [News API](https://newsapi.org/)
-
-#### **Frameworks, Libraries & Programs Used**
-
-1. [Google Fonts](https://fonts.google.com/) was used to import fonts 'Montserrat'and 'Arima Madurai' that are used throughout the website. 
-
-2. [Adobe color](https://color.adobe.com/mythemes) was used to extract the colors used on the website. 
-3. [Git](https://git-scm.com/) was used to used to edit the code on the Gitpod terminal, to commit to Git and Push to GitHub.
-
-4. [GitHub](https://github.com/) is used to store the project code after being pushed from Git. 
-
-## **Testing**
-### **Validator Testing**
 
 #### Lighthouse report
 The website passed the Lighthouse report for all pages
@@ -193,19 +207,29 @@ The project was deployed to GitHub Pages using the following steps:
 
 5. Type git clone, and then paste the URL you copied earlier.
 
-6. You will see a message confirmation that the command was successul. 
+6. You will see a message confirmation that the command was successul.
+
+### Deployment on Heroku
+
+This project was deployed on Heroku using these steps:
+
+2. Log in to Heroku and create a new app.
+3. Add the heroku-postgres add-on
+4. Complete the config vars section
+5. Link Heroku and GitHub accounts together
+6. Select the Github repo that you use for the app and give it a name
+7. Click on deploy.
 
 
 ## **Credits**
 
- 
 ### **Media**
 All media from my website were downloaded with permission from [Unsplash](https://unsplash.com/s/photos/thank-you?orientation=landscape)
 
 ### **Code inspiration**
-Change navbar button color [StackOverflow](https://stackoverflow.com/questions/42586729/how-can-i-change-the-bootstrap-4-navbar-button-icon-color)
-Bootstrap Mdn Form styling [Bootstrao Mdn](https://mdbootstrap.com/docs/standard/extended/registration/)
-News API Tutorial [Django Project: Build News App | From Scratch](https://www.youtube.com/watch?v=Mh69OwfeDkA)
+1. Change navbar button color [StackOverflow](https://stackoverflow.com/questions/42586729/how-can-i-change-the-bootstrap-4-navbar-button-icon-color)
+2. Bootstrap Mdn Form styling [Bootstrao Mdn](https://mdbootstrap.com/docs/standard/extended/registration/)
+3. News API Tutorial [Django Project: Build News App | From Scratch](https://www.youtube.com/watch?v=Mh69OwfeDkA)
 
 
 
