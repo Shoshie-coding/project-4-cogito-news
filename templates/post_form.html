@@ -9,10 +9,10 @@
         <h1>Write a blog and inspire the world</h1>
     </div>
 </div>
-<div id="formular" class="container">
+<div id="formular" class="container text-center">
     <form method="post" enctype="multipart/form-data">{% csrf_token %}
         {{ form.as_p }}
-        <button class="justify-content-center btn-primary" type="submit">Submit</button>
+        <button class="justify-content-center btn-primary btn-lg text-uppercase mb-5 mt-5" type="submit">Submit</button>
     </form>
 </div>
 
