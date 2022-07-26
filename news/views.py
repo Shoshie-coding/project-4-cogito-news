@@ -95,22 +95,22 @@ def delete_post(request, pk):
 
 
 def blogs(request, category):
-    user_posts = Post.objects.filter(category=category, status = 1)
+    user_posts = Post.objects.filter(category=category)
     url = ('https://newsapi.org/v2/everything?'
            'q={}&'
-           'from=2022-03-28&'
+           'from=2022-06-28&'
            'sortBy=popularity&'
            'pageSize=5&'
            'apiKey=b336f8d783094ae1b6a923721064ccdd'.format(category))
     print(url)
     response = requests.get(url)
-    print(response.json()['articles'])
+    print(response.json())
     return render(request, "blogs.html", {'data': response.json()['articles'], 'user_posts': user_posts})
 
 
 class PostList(generic.ListView):
     model = Post
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    queryset = Post.objects.filter().order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 5
 
