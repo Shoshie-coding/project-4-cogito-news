@@ -11,8 +11,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='post',
-            name='category',
-            field=models.CharField(choices=[('Arts', 'Arts'), ('Technology', 'Technology')], max_length=250),
-        ),
-    ]
+            model_name='post', name='category', field=models.CharField(
+                choices=[
+                    ('Arts', 'Arts'), ('Technology', 'Technology')], max_length=250), ), ]

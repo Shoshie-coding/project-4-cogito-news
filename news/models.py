@@ -3,7 +3,8 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-CHOICES = [("Arts-culture", "Arts-culture"), ("Technology", "Technology"), ("Movies-music", "Movies-music"), ("Travel", "Travel")]
+CHOICES = [("Arts-culture", "Arts-culture"), ("Technology", "Technology"),
+           ("Movies-music", "Movies-music"), ("Travel", "Travel")]
 
 
 class Post(models.Model):
@@ -41,8 +42,11 @@ class Comment(models.Model):
     """
     This class represents the comments model
     """
-    
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+
+    post = models.ForeignKey(
+        Post,
+        on_delete=models.CASCADE,
+        related_name='comments')
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()

@@ -43,7 +43,13 @@ def get_context_data(self, **kwargs):
 class PostUpdateView(LoginRequiredMixin, generic.edit.UpdateView):
     """Renders the update view"""
     model = Post
-    fields = ['title', 'slug', 'featured_image', 'category', 'content', 'excerpt'] 
+    fields = [
+        'title',
+        'slug',
+        'featured_image',
+        'category',
+        'content',
+        'excerpt']
     template_name = "post_form.html"
 
     def form_valid(self, form):
@@ -59,7 +65,13 @@ class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
     """Renders the post creation view"""
 
     model = Post
-    fields = ["title", "slug", "featured_image", "category", "content", "excerpt"]
+    fields = [
+        "title",
+        "slug",
+        "featured_image",
+        "category",
+        "content",
+        "excerpt"]
     template_name = "post_form.html"
 
     def form_valid(self, form):
@@ -79,14 +91,13 @@ class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
             },
         )
 
-
     def get_success_url(self):
         """Returns thank you page after posting"""
         return reverse('thanks')
 
 
 def thankyou(request):
-    """Returns thank you page"""
+    """Returns thank you page after signup"""
     return render(request, "thankyou.html")
 
 
@@ -101,12 +112,14 @@ def thanks(request):
 
 
 def delete_post(request, pk):
+    """Returns delete page"""
     if request.method == "POST":
         Post.objects.get(pk=int(pk)).delete()
         return HttpResponseRedirect(reverse('myposts'))
 
 
 def blogs(request, category):
+    """Renders blogs news categories"""
     user_posts = Post.objects.filter(category=category)
     url = ('https://newsapi.org/v2/everything?'
            'q={}&'
@@ -117,7 +130,9 @@ def blogs(request, category):
     print(url)
     response = requests.get(url)
     print(response.json())
-    return render(request, "blogs.html", {'data': response.json()['articles'], 'user_posts': user_posts})
+    return render(
+        request, "blogs.html", {
+            'data': response.json()['articles'], 'user_posts': user_posts})
 
 
 class PostList(generic.ListView):
@@ -128,9 +143,10 @@ class PostList(generic.ListView):
 
 
 class MyPostList(generic.ListView):
+    """Returns my posts page"""
     model = Post
     template_name = 'myposts.html'
-    
+
     def get_queryset(self):
         return Post.objects.filter(author=self.request.user)
 
@@ -141,4 +157,3 @@ class ArticleDetailView(View):
     """
     model = Post()
     template_name = 'article_details.html'
-    

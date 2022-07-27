@@ -13,6 +13,16 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='post',
             name='category',
-            field=models.CharField(choices=[('Arts-culture', 'Arts-culture'), ('Technology', 'Technology'), ('Movies%20and%20Music', 'Movies and Music'), ('Travel', 'Travel')], max_length=250),
+            field=models.CharField(
+                choices=[
+                    ('Arts-culture',
+                     'Arts-culture'),
+                    ('Technology',
+                     'Technology'),
+                    ('Movies%20and%20Music',
+                     'Movies and Music'),
+                    ('Travel',
+                     'Travel')],
+                max_length=250),
         ),
     ]
