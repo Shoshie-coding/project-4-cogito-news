@@ -41,6 +41,7 @@ def get_context_data(self, **kwargs):
 
 
 class PostUpdateView(LoginRequiredMixin, generic.edit.UpdateView):
+    """Renders the update view"""
     model = Post
     fields = ['title', 'slug', 'featured_image', 'category', 'content', 'excerpt'] 
     template_name = "post_form.html"
@@ -55,8 +56,10 @@ class PostUpdateView(LoginRequiredMixin, generic.edit.UpdateView):
 
 
 class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
+    """Renders the post creation view"""
+
     model = Post
-    fields = ['title', 'slug', 'featured_image', 'category', 'content', 'excerpt'] 
+    fields = ["title", "slug", "featured_image", "category", "content", "excerpt"]
     template_name = "post_form.html"
 
     def form_valid(self, form):
@@ -65,16 +68,17 @@ class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
         return super().form_valid(form)
 
         return render(
-                request,
-                "post_detail.html",
-                {
-                    "post": post,
-                    "comments": comments,
-                    "commented": False,
-                    "liked": liked,
-                    "comment_form": CommentForm()
-                },
-            )
+            request,
+            "post_detail.html",
+            {
+                "post": post,
+                "comments": comments,
+                "commented": False,
+                "liked": liked,
+                "comment_form": CommentForm(),
+            },
+        )
+
 
     def get_success_url(self):
         """Returns thank you page after posting"""
@@ -87,11 +91,12 @@ def thankyou(request):
 
 
 def home(request):
-    """Returns thank you page"""
+    """Returns homepage"""
     return render(request, "index.html")
 
 
 def thanks(request):
+    """Returns thanks page after posting"""
     return render(request, "thanks.html")
 
 
