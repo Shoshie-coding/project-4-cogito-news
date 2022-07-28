@@ -59,6 +59,9 @@ class PostUpdateView(LoginRequiredMixin, generic.edit.UpdateView):
 
     def get_success_url(self):
         return reverse('thanks')
+        messages.success(
+            request, 'Post was successfully added'
+        )
 
 
 class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
