@@ -35,6 +35,7 @@ def get_context_data(self, **kwargs):
     liked = False
     if likes_connected.likes.filter(id=self.request.user.id).exists():
         liked = True
+    
     data['number_of_likes'] = likes_connected.number_of_likes()
     data['post_is_liked'] = liked
     return data
@@ -58,10 +59,11 @@ class PostUpdateView(LoginRequiredMixin, generic.edit.UpdateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('thanks')
         messages.success(
-            request, 'Post was successfully added'
+            self.request, 'Post was successfully updated!'
         )
+        return reverse('thanks')
+     
 
 
 class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):

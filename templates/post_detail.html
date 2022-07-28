@@ -14,7 +14,7 @@
   <form action="{% url 'post_like' object.id %}" method="POST">
     {% csrf_token %}
 
-    {% if post_is_liked %}
+    {% if object.post_is_liked %}
     <button type="submit" name="post_id" value="{{object.id}}" class="btn btn-primary">Unlike</button>
     {% else %}
     <button type="submit" name="post_id" value="{{object.id}}" class="btn btn-primary">Like</button>
@@ -24,7 +24,7 @@
   <a class="btn btn-primary" href="{% url 'account_login' %}?next={{request.path}}">Log in to like this
     article!</a><br>
   {% endif %}
-  <strong class="text-secondary">{{ number_of_likes }} Like{{ number_of_likes|pluralize }}</strong>
+  <strong class="text-secondary">{{ object.number_of_likes }} Like{{ object.number_of_likes|pluralize }}</strong>
 
 </div>
 {% endblock %}
