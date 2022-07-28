@@ -62,7 +62,6 @@
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                     <form action="{% url 'delete_post' item.id %}" method="POST"><button type="submit"
                                             class="btn btn-danger">Delete</button>{% csrf_token %}</form>
-
                                 </div>
                             </div>
                         </div>
@@ -84,5 +83,5 @@
             {% endfor %}
         </div>
     </div>
-
+</div>
     {% endblock %}

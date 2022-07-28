@@ -98,6 +98,9 @@ class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
 
     def get_success_url(self):
         """Returns thank you page after posting"""
+        messages.success(
+            self.request, 'Post was successfully created!'
+        )
         return reverse('thanks')
 
 
@@ -120,6 +123,9 @@ def delete_post(request, pk):
     """Returns delete page"""
     if request.method == "POST":
         Post.objects.get(pk=int(pk)).delete()
+        messages.success(
+            request, 'Post was deleted!'
+        )
         return HttpResponseRedirect(reverse('myposts'))
 
 
