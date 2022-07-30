@@ -35,7 +35,6 @@ def get_context_data(self, **kwargs):
     liked = False
     if likes_connected.likes.filter(id=self.request.user.id).exists():
         liked = True
-    
     data['number_of_likes'] = likes_connected.number_of_likes()
     data['post_is_liked'] = liked
     return data
@@ -63,7 +62,6 @@ class PostUpdateView(LoginRequiredMixin, generic.edit.UpdateView):
             self.request, 'Post was successfully updated!'
         )
         return reverse('thanks')
-     
 
 
 class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
@@ -134,7 +132,7 @@ def blogs(request, category):
     user_posts = Post.objects.filter(category=category)
     url = ('https://newsapi.org/v2/everything?'
            'q={}&'
-           'from=2022-06-28&'
+           'date.now()'
            'sortBy=popularity&'
            'pageSize=5&'
            'apiKey=b336f8d783094ae1b6a923721064ccdd'.format(category))
