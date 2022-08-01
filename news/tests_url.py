@@ -6,6 +6,7 @@ from news.views import *
 # Create your tests here
 class TesNewsUrls(SimpleTestCase):
     """Test news urls"""
+
     def test_create_url_is_resolved(self):
         url = reverse('create')
         self.assertEquals(

@@ -12,7 +12,6 @@ from django.contrib.messages.views import SuccessMessageMixin
 from .forms import CommentForm
 
 
-
 def post_likes(request, pk):
     """Renders post likes"""
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
@@ -132,12 +131,15 @@ def delete_post(request, pk):
 def blogs(request, category):
     """Renders blogs news categories"""
     user_posts = Post.objects.filter(category=category)
-    url = ('https://newsapi.org/v2/everything?'
-           'q={}&'
-           'current_datetime = datetime.datetime.now()'
-           'sortBy=popularity&'
-           'pageSize=5&'
-           'apiKey=b336f8d783094ae1b6a923721064ccdd'.format(category))
+    url = (
+        'https://newsapi.org/v2/everything?'
+        'q={}&'
+        'current_datetime={}'
+        'sortBy=popularity&'
+        'pageSize=5&'
+        'apiKey=b336f8d783094ae1b6a923721064ccdd'.format(
+            category,
+            datetime.datetime.now()))
     print(url)
     response = requests.get(url)
     print(response.json())
