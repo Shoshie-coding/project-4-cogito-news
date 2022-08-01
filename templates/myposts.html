@@ -6,7 +6,7 @@
 
 <div class="container container-fluid justify-content-center">
     <div class="row gx-5">
-        <div class="col-md-12">
+        <div class="col-md-12 mb-5">
             <h1 class="title text-center mb-5">My Posts</h1>
 
             {% for item in object_list %}
@@ -19,9 +19,8 @@
                     </div>
                 </div>
                 <div class="content">
-                    <p class='text-justify'>{{item.excerpt}}</p>
-
-                    <div class="row">
+                    <p class='text-justify mt-3'>{{item.excerpt}}</p>
+                    <div class="row text-center">
                         <div class="col-sm-4">
                             <a href="/blog/{{item.slug}}" class="btn btn-primary" role="button">Read more</a>
                         </div>
@@ -29,11 +28,7 @@
                             <a href="{% url 'Post_update' item.id %}" class="btn btn-primary">Update post</a>
                         </div>
                         <div class="col-sm-4">
-                            <!-- <form id="form" method="POST" action="{% url 'delete_post' item.id %}">
-                                {% csrf_token %}
-                                <button id="delete" type="submit" class="btn btn-danger">DELETE</button>
 
-                            </form> -->
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-danger" data-toggle="modal"
                                 data-target="#delete_modal">
@@ -56,7 +51,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    Are you sure you want to delete this post {{ item.title }}?
+                                    Are you sure you want to delete this post <i>{{ item.title }}</i>?
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -66,17 +61,18 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
-            <!-- If user has no created recipes -->
+            <!-- If user has no created posts -->
             {% empty %}
             <div class="container log-box">
                 <div class="row justify-content-md-center">
                     <div class="col-md-12 mt-4">
-                        <p class="lead text-center">You dont have any posts yet! Try adding some now.
+                        <p class="lead text-center">You dont have any posts yet. Try adding some now!
                         </p>
+                        <div class="text-center"><a href="/create" class="text-center mt-3 btn btn-primary">Write post</a>
+                        </div>
                     </div>
                 </div>
             </div>
