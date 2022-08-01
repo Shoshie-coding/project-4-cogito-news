@@ -1,3 +1,4 @@
+import datetime
 import requests
 from django.shortcuts import render, reverse, get_object_or_404
 from django.views import generic, View
@@ -9,6 +10,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from .forms import CommentForm
+
 
 
 def post_likes(request, pk):
@@ -132,7 +134,7 @@ def blogs(request, category):
     user_posts = Post.objects.filter(category=category)
     url = ('https://newsapi.org/v2/everything?'
            'q={}&'
-           'date.now()'
+           'current_datetime = datetime.datetime.now()'
            'sortBy=popularity&'
            'pageSize=5&'
            'apiKey=b336f8d783094ae1b6a923721064ccdd'.format(category))
