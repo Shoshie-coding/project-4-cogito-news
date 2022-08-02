@@ -15,9 +15,9 @@
     {% csrf_token %}
 
     {% if object.post_is_liked %}
-    <button type="submit" name="post_id" value="{{object.id}}" class="btn btn-primary">Unlike</button>
+    <button type="submit" name="post_id" value="{{object.id}}" class="btn btn-primary btn-lg text-center">Unlike</button>
     {% else %}
-    <button type="submit" name="post_id" value="{{object.id}}" class="btn btn-primary">Like</button>
+    <button type="submit" name="post_id" value="{{object.id}}" class="btn btn-primary btn-lg text-center">Like</button>
     {% endif %}
   </form>
   {% else %}

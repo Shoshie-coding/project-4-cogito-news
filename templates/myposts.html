@@ -14,7 +14,7 @@
             <div class="blog_post">
                 <div class="featured">
                     <h1 class="text-center title">{{item.title}}</h1>
-                    <div class="shadow-2-strong rounded-5"><img src="{{item.featured_image.url}}" class="img-fluid">
+                    <div class="shadow-2 rounded-5"><img src="{{item.featured_image.url}}" class="img-fluid">
                         <div class="mask"></div>
                     </div>
                 </div>
@@ -22,22 +22,19 @@
                     <p class='text-justify mt-3'>{{item.excerpt}}</p>
                     <div class="row text-center">
                         <div class="col-sm-4">
-                            <a href="/blog/{{item.slug}}" class="btn btn-primary" role="button">Read more</a>
+                            <a href="/blog/{{item.slug}}" class="btn btn-primary button-row mb-2">Read more</a>
                         </div>
                         <div class="col-sm-4">
-                            <a href="{% url 'Post_update' item.id %}" class="btn btn-primary">Update post</a>
+                            <a href="{% url 'Post_update' item.id %}" class="btn button-row btn-primary mb-2">Update post</a>
                         </div>
                         <div class="col-sm-4">
-
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-danger" data-toggle="modal"
+                            <button type="button" class="btn button-row btn-danger mb-2" data-toggle="modal"
                                 data-target="#delete_modal">
                                 Delete
                             </button>
                         </div>
-
                     </div>
-
 
                     <!-- Modal -->
                     <div class="modal fade" id="delete_modal" data-backdrop="static" data-keyboard="false" tabindex="-1"
