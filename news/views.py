@@ -60,7 +60,7 @@ class PostUpdateView(LoginRequiredMixin, generic.edit.UpdateView):
 
     def get_success_url(self):
         messages.success(
-            self.request, 'Post was successfully updated!'
+            self.request, 'Your updated post was successfully sent for approval'
         )
         return reverse('thanks')
 
@@ -98,7 +98,7 @@ class PostCreateView(LoginRequiredMixin, generic.edit.CreateView):
     def get_success_url(self):
         """Returns thank you page after posting"""
         messages.success(
-            self.request, 'Post was successfully created!'
+            self.request, 'Your post was succcessfully sent for approval!'
         )
         return reverse('thanks')
 
