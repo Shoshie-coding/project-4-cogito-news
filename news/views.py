@@ -130,7 +130,7 @@ def delete_post(request, pk):
 
 def blogs(request, category):
     """Renders blogs news categories"""
-    user_posts = Post.objects.filter(category=category)
+    user_posts = Post.objects.filter(category=category, status = 1)
     url = (
         'https://newsapi.org/v2/everything?'
         'q={}&'
@@ -150,7 +150,7 @@ def blogs(request, category):
 
 class PostList(generic.ListView):
     model = Post
-    queryset = Post.objects.filter().order_by('-created_on')
+    queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 5
 
