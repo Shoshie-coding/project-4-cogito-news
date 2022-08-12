@@ -188,37 +188,39 @@ The code is on the My posts page - when deleting a post the modal should pop up 
 The code works in the console but not on the website itself. I've left the code on my website for reference. 
 
 ## **Deployment**
-### GitHub Pages
-The project was deployed to GitHub Pages using the following steps:
-1. Go to GitHub and locate the repository to be deployed [GitHub Repository](https://github.com/Shoshie-coding/project-1)
-2. On the top right-hand side - click Settings
-3. Scroll down until you locate the Pages tab on the left-hand side navigation menu. 
-4. Under Source - click on the drop-down called None and select Main and leave the /(root) option as it is. 
-5. Click Save 
-6.  The Page refreshes itself - message " Your site is ready to be published at https://shoshie-coding.github.io/project-1/. 
-7. Refresh page - notice message -  Your site is published at https://shoshie-coding.github.io/project-1/. 
 
-### Clone a repository using these steps:
-1. On GitHub, navigate to the main page of the repository.
+This project was deployed using Github and Heroku
 
-2. Above the list of files, click the Code button.
-3. To clone the repository using HTTPS, under "Clone with HTTPS", click the clone symbol. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click Use SSH, then click the clone symbol next to it. To clone a repository using GitHub CLI, click Use GitHub CLI, then click the same clone symbol .
-4. Open Git Bash and change the current working directory to the location where you want the cloned directory.
+### Create a repository on Github
+You can create a repository on Github using these instructions [Creating a new repository - Github](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
 
-5. Type git clone, and then paste the URL you copied earlier.
-
-6. You will see a message confirmation that the command was successul.
 
 ### Deployment on Heroku
 
+I followed Code Institute's [Django Blog Cheat Sheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf) steps to create and deploy the project on Heroku 
+
+
 This project was deployed on Heroku using these steps:
 
+1. Install Django and supporting libraries
 2. Log in to Heroku and create a new app.
-3. Add the heroku-postgres add-on
-4. Complete the config vars section
-5. Link Heroku and GitHub accounts together
-6. Select the Github repo that you use for the app and give it a name
-7. Click on deploy.
+3. Attach the heroku-postgres add-on
+4. Prepare environment and settings.py file
+5. Get the static and media files stored on Cloudinary
+6. Complete the config vars section
+7. Link Heroku and GitHub accounts together
+8. Select the Github repo that you use for the app and give it a name
+9. Before the final Deployement: Remove the "DISABLE_COLLECTSTATIC" from Heroku Config vars, and Change Debug to "False" in settings.py
+10. Click on deploy.
+
+
+### Clone a Github repository using these steps:
+1. On GitHub, navigate to the main page of the repository.
+2. Above the list of files, click the Code button.
+3. To clone the repository using HTTPS, under "Clone with HTTPS", click the clone symbol. To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click Use SSH, then click the clone symbol next to it. To clone a repository using GitHub CLI, click Use GitHub CLI, then click the same clone symbol .
+4. Open Git Bash and change the current working directory to the location where you want the cloned directory.
+5. Type git clone, and then paste the URL you copied earlier.
+6. You will see a message confirmation that the command was successul.
 
 
 ## **Credits**
