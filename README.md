@@ -18,6 +18,7 @@ The following User Stories have been used to organise and create this project
 - **As a User I can easily navigate the website so that I can go from one page to another**
 - **As a Site User I can click on View more to open a post so that I can read what's in it**
 - **As a Site User I can sign up for an account so that I can like posts and create my own posts**
+- **As a Site User I can be informed of the status of my post after creating and updatimg it so that I know if my post was published on the website**
 - **As a Site Admin I can update and delete posts so that I can moderate and website content**
 - **As a Site Admin I can create drafts so that I can finish my writing later**
 - **As a Site Admin I can create a Superuser so that I can manage posts and approve comments**
@@ -66,29 +67,55 @@ User can access the 4 main categories from the home page
 Users need to create an account that enables them to write posts
 ![Write a post](static/images/write-blog-screenshot.png)
 
--**Write post call to action post on the Home page**
+- **Write post call to action post on the Home page**
 ![Call to action](static/images/call-toaction-screenshot.png)
 
--**Categories and blogs page**
+- **Categories and blogs page**
 User can navigate to all categories from the categories page and User can read the blogs in a new page
 ![Categories pages](static/images/categories-page-screenshot.png)
 
--**Thanks message after posting**
+- **Thanks message after creating post**
 ![Thank you message](static/images/thanks-posting-screenshot.png)
-User receices a message after posting 
+User receices a message page and message box informing them that the post is pending approval and will be reviewed and published shortly by an Admin. 
 
--**Message after signing up**
+- **Thanks message after updating post**
+![Thank you message](static/images/updated-post.png)
+User receices a message page and message box informing them that the updated post is pending approval and will be reviewed and published shortly by an Admin. 
+
+- **Message before and after deleting a post**
+User is asked to confirm via a message box wether they wish to delete the post. 
+After deleting a post, User receives a confirmation message that the post was deleted. 
+User can delete both Pending approval and Published posts. 
+![Delete warning](static/images/delete-warning.png
+)
+![Delete message](static/images/delete-message.png)
+
+
+- **Message after signing up**
 After, signing up User is sent to a thank you page with a button that goes to the Home page.
 ![Admin Panel](static/images/signup-thanks-screenshot.png)
 
--**View My posts**
+- **Message after Sign in and Log out**
+![Sign in message](static/images/sign-in-message.png)
+![Log out](static/images/log-out-message.png)
+
+
+
+- **View My posts**
+My Posts page that shows all posts a User/Admin created including respective status - published or pending approval.
+Each post is showing the excerpt - you can click on Read more - to read the full post, Update post to update the post and Delete to delete the post.
 ![My posts](static/images/my-posts-screenshot.png)
 
--**Django admin panel**
+- **Post detail page**
+When User clicks on Read more from the News Categories page or on the My Posts page - they are sent to the post detail page where they can read the post in full. 
+![My posts](static/images/post-detail.png)
+
+
+- **Django admin panel**
 Site Superuser can login to django and see all their posts and their statuses.
 ![Admin Panel](static/images/django-admin-panel-screenshot.png)
 
--**Django change post**
+- **Django change post**
 Site super User can read, delete and edit the posts from users 
 ![Admin Panel](static/images/change-options-screenshot.png)
 ![Admin Panel](static/images/confirmation-admin-screenshot.png)
