@@ -141,7 +141,6 @@ a {
 /* Post detail page */
 
 .post-container {
-    text-align: justify;
     margin: 50px auto;
     border: none;
     max-width: 860px;
@@ -150,6 +149,7 @@ a {
     height: 100%;
     color: black;
 }
+
 
 .post-img {
     display: block;

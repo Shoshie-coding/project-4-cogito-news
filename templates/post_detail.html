@@ -5,9 +5,9 @@
 
 {% block content %}
 <div class="post-container">
-  <h2 class="mt-2 mb-4">{{object.title}}</h2>
+  <h2 class="mt-2 mb-5 text-center">{{object.title}}</h2>
   <img src="{{object.featured_image.url}}" class="post-img" />
-  <p class="post">{{object.content}}</p>
+  <p class="post text-justify my-3">{{object.content}}</p>
 
   <!-- LIKES -->
   {% if user.is_authenticated %}
