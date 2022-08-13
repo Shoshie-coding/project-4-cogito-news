@@ -123,7 +123,7 @@ def delete_post(request, pk):
     if request.method == "POST":
         Post.objects.get(pk=int(pk)).delete()
         messages.success(
-            request, 'Post was deleted!'
+            request, 'Post was successfully deleted!'
         )
         return HttpResponseRedirect(reverse('myposts'))
 
