@@ -1,7 +1,7 @@
 # **Cogito, ergo sum**
 
 You can view the live website [here](https://cogito-news.herokuapp.com/).
-![Homepage image](static/images/Home%20page.png)
+![Homepage image](static/images/am-i-responsive.png)
 
 ## **About this project**
 This is a full stack website build uinsg Django, Python, Postgres SQL, Bootstrap, Javascript, HTML and CSS.
@@ -149,13 +149,20 @@ I kept the design clean and elegant, tipography is Quattrocento Sans', fall back
 
 ### Validator testing 
 ### HTML 
-There is an error message on create post page when checking with the code validator. There isn't however an issue with the page's functionality.
-![HTML Validator](static/images/HTML-1.png)
-![HTML Validator](static/images/HTML-2.png)
-![HTML Validator](static/images/HTML-3.png)
-![HTML Validator](static/images/HTML-4.png)
-![HTML Validator](static/images/HTML-5.png)
+All the below pages don't have any errors or issues
+- Home page
+![HTML Home](static/images/home-html.png)
+- Post detail page
+![Post detail page](static/images/html-post-detail.png)
+- Create post page
+![HTML Validator](static/images/html-create-post.png)
+- Logout page
+![HTML Validator](static/images/html-logout.png)
+- Login page
+![HTML Validator](static/images/html-login.png)
+- Sign-up page
 ![HTML Validator](static/images/HTML-6.png)
+
 ![HTML Validator](static/images/HTML-7.png)
 
 
