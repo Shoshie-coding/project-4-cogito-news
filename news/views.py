@@ -137,7 +137,7 @@ def blogs(request, category):
         'current_datetime={}'
         'sortBy=popularity&'
         'pageSize=5&'
-        'apiKey=b336f8d783094ae1b6a923721064ccdd'.format(
+        'apiKey=e2be81c614b6415cb6cb67decd019882'.format(
             category,
             datetime.datetime.now()))
     print(url)

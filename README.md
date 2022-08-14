@@ -75,10 +75,12 @@ User can navigate to all categories from the categories page and User can read t
 ![Categories pages](static/images/categories-page-screenshot.png)
 
 - **Thanks message after creating post**
+- When User creates a post, the post is set to Pending Approval Status. 
 ![Thank you message](static/images/thanks-posting-screenshot.png)
 User receices a message page and message box informing them that the post is pending approval and will be reviewed and published shortly by an Admin. 
 
 - **Thanks message after updating post**
+When User updates a post, the post is set to Pending Approval Status. 
 ![Thank you message](static/images/updated-post.png)
 User receices a message page and message box informing them that the updated post is pending approval and will be reviewed and published shortly by an Admin. 
 
@@ -152,8 +154,12 @@ I kept the design clean and elegant, tipography is Quattrocento Sans', fall back
 All the below pages don't have any errors or issues
 - Home page
 ![HTML Home](static/images/home-html.png)
+- News and blogs page
+![HTML Home](static/images/html-news-blogs.png)
+
 - Post detail page
 ![Post detail page](static/images/html-post-detail.png)
+
 - Create post page
 ![HTML Validator](static/images/html-create-post.png)
 - Logout page
@@ -163,15 +169,29 @@ All the below pages don't have any errors or issues
 - Sign-up page
 ![HTML Validator](static/images/HTML-6.png)
 
-![HTML Validator](static/images/HTML-7.png)
+
+### Known errors
+The only errors occured with validating My Posts page
+- When I try to validate this by address - I get the error - IO Error: HTTP resource not retrievable. The HTTP status from the remote server was: 500.
+- When I right-click - View Page Source - copy the code - paste it into the validator using the text-input method - I get several errors - all related to duplicate ID for delete_modal and staticBackdropLabel
+- I have adapted the code from Bootstrap page [Bootstrap Modal](https://getbootstrap.com/docs/4.0/components/modal/)
+- I have discussed this with Tutors and was advised that 
+- This is not a bug in itself because the page works as normal
+![HTML Validator](static/images/html-my-posts.png)
+
 
 
 ### CSS
+All CSS validations were withput errors.
+- The only page that had errors was the My posts page that is displaying errors with HTML validation as well. 
+
 ![CSS Validator](static/images/CSS-validator.png)
 
 ### Python
 Python code was validated using Pep8 validator online.
-Most errors were around the long code lines, i've left these as they are they don't impede with website's core functionality. 
+Test results can be found here[here](Pep8-results)
+
+
 ![Pep8](static/images/Pep8-1.png)
 ![Pep8](static/images/pep8-2.png)
 ![Pep8](static/images/pep8-3.png)
@@ -215,11 +235,6 @@ The website passed the Lighthouse report for all pages
 - Samsung tablet
 - Lenovo tablet
 
-## Known Bugs 
-
-Another feature I've implemented is delete confirmation modal with Jquery.
-The code is on the My posts page - when deleting a post the modal should pop up asking the User to confirm if they indeed want to delete the post.
-The code works in the console but not on the website itself. I've left the code on my website for reference. 
 
 ## **Deployment**
 

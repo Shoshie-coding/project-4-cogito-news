@@ -11,7 +11,7 @@ hr {
     margin: 1rem 0;
     color: black;
     background-color: currentColor;
-    border: 1;
+    border: solid 1px black;
     opacity: 1;
 }
 
@@ -142,7 +142,7 @@ a {
 
 .post-container {
     margin: 50px auto;
-    border: none;
+    border: 0px;
     max-width: 860px;
     letter-spacing: 1px;
     line-height: 1.50;
