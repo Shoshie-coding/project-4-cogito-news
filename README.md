@@ -140,12 +140,12 @@ I kept the design clean and elegant, tipography is Quattrocento Sans', fall back
 
 #### **Frameworks, Libraries & Programs Used**
 
-1. [Google Fonts](https://fonts.google.com/) was used to import fonts 'Montserrat'and 'Arima Madurai' that are used throughout the website. 
-
+1. [Google Fonts](https://fonts.google.com/) was used to import fonts 'Quattrocento Sans' and 'Ovo' that are used throughout the website. 
 2. [Adobe color](https://color.adobe.com/mythemes) was used to extract the colors used on the website. 
 3. [Git](https://git-scm.com/) was used to used to edit the code on the Gitpod terminal, to commit to Git and Push to GitHub.
-
 4. [GitHub](https://github.com/) is used to store the project code after being pushed from Git. 
+5. [Heroku](https://heroku.com/) is used to deploy the website
+6. [Cloudinary](https://cloudinary.com/) is used to store the media files
 
 
 ## Testing
