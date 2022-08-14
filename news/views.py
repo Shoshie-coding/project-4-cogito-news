@@ -60,8 +60,8 @@ class PostUpdateView(LoginRequiredMixin, generic.edit.UpdateView):
 
     def get_success_url(self):
         messages.success(
-            self.request, 'Your updated post was successfully sent for approval'
-        )
+            self.request,
+            'Your updated post was successfully sent for approval')
         return reverse('thanks')
 
 
@@ -130,7 +130,7 @@ def delete_post(request, pk):
 
 def blogs(request, category):
     """Renders blogs news categories"""
-    user_posts = Post.objects.filter(category=category, status = 1)
+    user_posts = Post.objects.filter(category=category, status=1)
     url = (
         'https://newsapi.org/v2/everything?'
         'q={}&'

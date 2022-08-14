@@ -72,6 +72,7 @@ Users need to create an account that enables them to write posts
 
 - **Categories and blogs page**
 User can navigate to all categories from the categories page and User can read the blogs in a new page
+There is a News API [News API](https://newsapi.org/) in place to bring up news from various external sources
 ![Categories pages](static/images/categories-page-screenshot.png)
 
 - **Thanks message after creating post**
@@ -179,34 +180,40 @@ The only errors occured with validating My Posts page
 - This is not a bug in itself because the page works as normal
 ![HTML Validator](static/images/html-my-posts.png)
 
+### Known Limitations
+I've added [News API](https://newsapi.org/) to news and blogs page to bring up news from various source. I'm using a developper account so i am limited to 100 times per day to refresh the page.
+This is enough for testing purposes, however it will throw a server error if the limit is reached. I can refresh the API key if the limit is reached. 
 
 
 ### CSS
-All CSS validations were withput errors.
-- The only page that had errors was the My posts page that is displaying errors with HTML validation as well. 
+All CSS validations were without errors.
 
-![CSS Validator](static/images/CSS-validator.png)
+![CSS Validator](static/images/css-validator.png)
 
 ### Python
-Python code was validated using Pep8 validator online.
+- Python code was validated using [Pep8 validator online](http://pep8online.com/).
+- All the results returned without errors.
+- Before using the pep8 validator I ran autopep8 --in-place --aggressive --aggressive --recursive . 
+
+- The only error I found was in settings.py with AUTH_PASSWORD_VALIDATORS & STATICFILES_STORAGE.
+![Pep8](static/images/pep8-settings.png)
+
+
+- There are some suggested resolves for this here [Django](https://code.djangoproject.com/ticket/28163). It seems like according to Django shortening these lines is not advisable. This is why I decided to leave these lines as they are.
+
 Test results can be found here[here](Pep8-results)
 
 
-![Pep8](static/images/Pep8-1.png)
-![Pep8](static/images/pep8-2.png)
-![Pep8](static/images/pep8-3.png)
-![Pep8](static/images/pep8-4.png)
-![Pep8](static/images/pep8-5.png)
-![Pep8](static/images/pep8-6.png)
-![Pep8](static/images/pep8-7.png)
-![Pep8](static/images/pep8-8.png)
-![Pep8](static/images/pep8-9.png)
-![Pep8](static/images/pep8-10.png)
-![Pep8](static/images/pep8-11.png)
-
 #### Lighthouse report
 The website passed the Lighthouse report for all pages
-![Lighthouse report](static/images/lighthouse-report.png)
+![Lighthouse report](static/images/lighthouse-1.png)
+
+![Lighthouse report](static/images/lighthouse-2.png)
+
+![Lighthouse report](static/images/lighthouse-3.png)
+![Lighthouse report](static/images/lighthouse-4.png)
+![Lighthouse report](static/images/lighthouse-5.png)
+![Lighthouse report](static/images/lighthouse-6.png)
 
 
 ### **Responsiveness Test**
