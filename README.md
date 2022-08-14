@@ -163,22 +163,19 @@ All the below pages don't have any errors or issues
 
 - Create post page
 ![HTML Validator](static/images/html-create-post.png)
-- Logout page
+
+- My posts
+I validated this page by right-click - page source. Go to validator and use direct input 
+![HTML Validator](static/images/html-myposts.png)
+
+
+- Logout page 
 ![HTML Validator](static/images/html-logout.png)
 - Login page
 ![HTML Validator](static/images/html-login.png)
 - Sign-up page
 ![HTML Validator](static/images/html-signup.png)
 
-
-### Known errors
-The only errors occured with validating My Posts page
-- When I try to validate this by address - I get the error - IO Error: HTTP resource not retrievable. The HTTP status from the remote server was: 500.
-- When I right-click - View Page Source - copy the code - paste it into the validator using the text-input method - I get several errors - all related to duplicate ID for delete_modal and staticBackdropLabel
-- I have adapted the code from Bootstrap page [Bootstrap Modal](https://getbootstrap.com/docs/4.0/components/modal/)
-- I have discussed this with Tutors and was advised that 
-- This is not a bug in itself because the page works as normal
-![HTML Validator](static/images/html-my-posts.png)
 
 ### Known Limitations
 I've added [News API](https://newsapi.org/) to news and blogs page to bring up news from various source. I'm using a developper account so i am limited to 100 times per day to refresh the page.
@@ -189,6 +186,9 @@ This is enough for testing purposes, however it will throw a server error if the
 All CSS validations were without errors.
 
 ![CSS Validator](static/images/css-validator.png)
+
+### Javascript 
+I had a few warnings only when validating the Javascript
 
 ### Python
 - Python code was validated using [Pep8 validator online](http://pep8online.com/).
