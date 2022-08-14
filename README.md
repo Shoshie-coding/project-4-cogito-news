@@ -168,7 +168,7 @@ All the below pages don't have any errors or issues
 - Login page
 ![HTML Validator](static/images/html-login.png)
 - Sign-up page
-![HTML Validator](static/images/HTML-6.png)
+![HTML Validator](static/images/html-signup.png)
 
 
 ### Known errors
