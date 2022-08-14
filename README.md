@@ -47,7 +47,7 @@ I used the MVP model on my website. I have used a mix of Simple Tests in Django 
 Designed mainly using Bootstrap and CSS, the navbar is responsive on all devices, featuring a collapsible menu and a hamburger style menu on smaller devices like tablets and phones.
 You can navigate from the navbar to all the main pages on the website. 
 When User is not logged in, they will see options to Sign in and Register.
-![Hero image and navbar](static/images/navbar-hero-image-screenshot.png)
+![Hero image and navbar](static/images/navbar-user-log-out-screenshot.png)
 
 - **Header image and Navigation Bar - User is logged in** 
 When User is logged in, they will see additional options to Create post, My posts and Log out. 
