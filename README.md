@@ -1,9 +1,10 @@
 # **Cogito, ergo sum**
 
-You can view the live website [here](https://cogito-news.herokuapp.com/).
 ![Homepage image](static/images/am-i-responsive.png)
 
 ## **About this project**
+## You can view the live website [here](https://cogito-ergo-sum.onrender.com/)
+
 This is a full stack website build uinsg Django, Python, Postgres SQL, Bootstrap, Javascript, HTML and CSS.
 This project allows users to sign up and login to the website, create their own posts and chose a categpry for their posts. Users are also able to read and like posts from other users. I've implemented a news API so that users can view news around the world based on 4 categories: Arts and Culture, Technology, Movies and Music and Travel. 
 This website is for all those who are interested in the categories oulined above and who want to discover news from around the world at the same time as reading blogs written by users. 
